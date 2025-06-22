@@ -1,15 +1,15 @@
 <header class="relative bg-white shadow-sm p-4 h-24 w-full">
     <nav class="container mx-auto flex justify-between items-center h-full">
-        <!-- Center Logo (Overlaid) - Fixed positioning -->
-        <div class="absolute left-1/2 top-2 transform -translate-x-1/2 z-20" style="left: 50%; margin-left: -56px;">
+        <!-- Left Logo (Overlaid) - Fixed positioning -->
+        <div class="absolute left-12 top-2 z-10">
             <a href="{{ url('/') }}" class="block bg-transparent p-2 rounded-full">
                 <img class="h-28 w-auto max-w-none" src="{{ asset('images/logoo.png') }}" alt="Logo" style="display: block;">
             </a>
         </div>
 
-        <!-- Left Section: Logo and Site Title -->
-        <div class="w-1/3 pl-12" style="min-width: 0;">
-            <a href="{{ url('/') }}" class="hidden md:block text-2xl font-bold text-green-700 tracking-wide" style="font-family: Arial, Helvetica, sans-serif; white-space: nowrap;">Knuckles Products</a>
+        <!-- Left Section: Site Title (positioned to right of overlaid logo) -->
+        <div class="w-1/3 pl-40" style="min-width: 0;">
+            <a href="{{ url('/') }}" class="hidden md:block text-2xl font-bold text-green-700 tracking-wide" style="font-family: 'Inter', 'Knuckles products', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; white-space: nowrap;">Knuckles Products</a>
         </div>
 
         <!-- Right Section: Navigation Links, Cart, and Mobile Menu Button -->
