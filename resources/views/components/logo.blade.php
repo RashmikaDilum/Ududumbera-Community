@@ -1,0 +1,1 @@
+<img class="w-20 h-auto block" src="{{ asset('images/logoo.png') }}" alt="Logo"> <!-- Logo always visible -->
