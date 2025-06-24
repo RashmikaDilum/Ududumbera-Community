@@ -149,9 +149,13 @@
         </div>
     </section>
     <!-- Products Section -->
-<section id="products" class="py-16 md:py-24 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">Our Featured Products</h2>
+<section id="products" class="relative py-16 md:py-24">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 bg-cover bg-center blur-sm" style="background-image: url('{{ asset('images/main.jpg') }}');"></div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto text-white">Our Featured Products</h2>
 
         <div class="product-grid">
             <!-- Product Card: Kithul Jaggery -->
@@ -217,6 +221,116 @@
     </div>
 </section>
 
+    <!-- How It's Made Summary Section -->
+    <section id="how-its-made-summary" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 section-heading mx-auto">From Land to Your Hand</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                Every product tells a story of tradition, dedication, and community. We follow time-honored methods to bring you authentic, high-quality goods straight from the heart of Sri Lanka.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+                <!-- Left Side: Image -->
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="{{ asset('images/hero/kithulTapping.jpg') }}" alt="Artisan crafting a product" class="w-full h-auto md:h-96 object-cover rounded-xl">
+                </div>
+                <!-- Right Side: Text -->
+                <div class="bg-gray-50 rounded-xl p-4 shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105  ">
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">The Art of Our Craft</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed ">
+                        From the ancient practice of Kithul palm tapping to the careful harvesting of organic turmeric, our processes are steeped in tradition. Skilled artisans use natural materials to handcraft each item, ensuring every product you receive supports sustainable livelihoods.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        This dedication preserves our heritage and brings a piece of Sri Lankan culture to you.
+                    </p>
+                    <a href="{{ url('/how-its-made') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Learn How It's Made</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">Our Services</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                Beyond our products, we offer unique experiences and services that connect you directly with our community's culture and craftsmanship.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Service Card 1: Custom Orders -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                    <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
+                        <svg class="w-10 h-10 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Custom & Bulk Orders</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Planning a special event or looking for unique corporate gifts? We offer custom and bulk ordering to meet your needs.
+                    </p>
+                        <a href="{{ url('/services#custom-orders') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Inquire Now &rightarrow;</a>
+                </div>
+
+                <!-- Service Card 2: Workshops -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                    <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
+                        <svg class="w-10 h-10 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-3.172 3.172a1 1 0 00.707 1.707H17.62a1 1 0 00.707-1.707l-3.172-3.172M6.75 15.75c0-1.02.424-1.93.992-2.599a3.75 3.75 0 115.516 0c.568.67.992 1.579.992 2.599s-.424 1.93-.992 2.599a3.75 3.75 0 11-5.516 0c-.568-.67-.992-1.579-.992-2.599z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Artisan Workshops</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Join our hands-on workshops and learn traditional crafts like kithul tapping and weaving directly from our skilled artisans.
+                    </p>
+                    <a href="{{ url('/services#workshops') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Learn More &rightarrow;</a>
+                </div>
+
+                <!-- Service Card 3: Cultural Tours -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                    <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
+                        <svg class="w-10 h-10 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Community & Cultural Tours</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Experience the heart of Sri Lankan village life. Visit our communities, see how our products are made, and enjoy the local culture.
+                    </p>
+                    <a href="{{ url('/services#tours') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Book a Tour &rightarrow;</a>
+                </div>
+
+                <!-- Service Card 4: Kabana Stay -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                    <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
+                        <svg class="w-10 h-10 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.931 0-3.598 1.126-4.312 2.733-.715-1.607-2.381-2.733-4.311-2.733C5.101 3.75 3 5.765 3 8.25c0 .722.273 1.398.744 1.885M5 9.75h14.002c.266 0 .52.102.706.29.188.187.29.442.29.71v5.282c0 .267-.102.52-.29.707-.186.187-.44.29-.706.29H5c-.266 0-.52-.102-.706-.29-.187-.186-.29-.44-.29-.707V10.75c0-.268.103-.52.29-.707.187-.188.44-.29.706-.29h.002z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Kabana Stay</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Immerse yourself in nature with a tranquil stay in our traditional Kabana. Experience the serenity of village life.
+                    </p>
+                    <a href="{{ url('/services#kabana-stay') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Book Your Stay &rightarrow;</a>
+                </div>
+
+                <!-- Service Card 5: Tour Guide -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                    <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
+                        <svg class="w-10 h-10 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75a2.25 2.25 0 012.25 2.25V15m0 0l-3-3m3 3l-3 3M7.5 19.5h-4.5c-1.08 0-1.988-.79-1.988-1.777v-8.447c0-.988.908-1.777 1.988-1.777h4.5m0 0c.96.001 1.887.291 2.621.795l3.5 3.5c.445.445.714 1.036.714 1.677v2.016" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Tour Guide</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Enhance your visit with a knowledgeable local guide. Discover hidden gems and gain deeper insights into the area's culture and nature.
+                    </p>
+                    <a href="{{ url('/services#tour-guide') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Find a Guide &rightarrow;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action Section -->
     <section class="py-16 bg-green-700 text-white text-center">
         <div class="container mx-auto px-4">
@@ -261,15 +375,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 text-center">
-        <div class="container mx-auto px-4">
-            <p>&copy; Ududumbara commiunity. All rights reserved.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
+    <x-footer />
 
     <!-- Shopping Cart Modal/Section (Initially Hidden) -->
     <div id="cart-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full flex items-center justify-center hidden z-[100]">

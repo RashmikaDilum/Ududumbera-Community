@@ -14,3 +14,7 @@ Route::get('/how-its-made', function () {
 Route::get('/our-story', function () {
     return view('our-story');
 });
+
+Route::get('/services', function () {
+    return view('services');
+});

@@ -186,6 +186,17 @@
         </div>
     </main>
 
+    <!-- Services Call to Action Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-green-800 mb-4">More Than Just Products</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+                Immerse yourself in our culture. We also offer unique services like artisan workshops, cultural tours, and tranquil Kabana stays.
+            </p>
+            <a href="{{ url('/services') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-primary">Explore Our Services</a>
+        </div>
+    </section>
+
     <x-footer />
 
     <!-- Shopping Cart Modal/Section (Initially Hidden) -->
