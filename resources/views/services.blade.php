@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Ududumbara Community</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.0"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Ududumbara Commiunity', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #f8f8f8;
             color: #333;
         }
@@ -55,23 +57,6 @@
 
     <!-- Detailed Services Section -->
     <main class="container mx-auto py-16 md:py-24 px-4 space-y-20">
-
-        <!-- Service 1: Custom & Bulk Orders -->
-        <section id="custom-orders" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <h3 class="text-3xl font-bold text-green-800 mb-4">Custom & Bulk Orders</h3>
-                <p class="text-gray-700 leading-relaxed mb-4">
-                    Looking for unique corporate gifts, wedding favors, or special event decorations? We offer bespoke services to bring your vision to life. Our artisans can create custom versions of our products or design something entirely new for you.
-                </p>
-                <p class="text-gray-700 leading-relaxed mb-6">
-                    We handle bulk orders with care, ensuring each item maintains its handcrafted quality. Contact us to discuss your requirements, and we'll work with you to create something truly memorable.
-                </p>
-                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Request a Quote</a>
-            </div>
-            <div class="order-1 md:order-2">
-                <img src="{{ asset('images/services/custom-orders.jpg') }}" alt="Custom Orders" class="rounded-xl shadow-lg w-full h-96 object-cover">
-            </div>
-        </section>
 
         <!-- Service 2: Artisan Workshops -->
         <section id="workshops" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -141,6 +126,23 @@
             </div>
         </section>
 
+        <!-- Service 6: Camping Sites -->
+        <section id="camping-sites" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="{{ asset('images/services/camping.jpg') }}" alt="Camping Sites" class="rounded-xl shadow-lg w-full h-96 object-cover">
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold text-green-800 mb-4">Scenic Camping Sites</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Experience the great outdoors with our designated camping sites. Set up your tent in breathtaking locations with stunning views of the Knuckles Mountain Range.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Our sites provide a safe and serene environment for you to connect with nature. Whether you're an experienced camper or new to it, we offer basic amenities to ensure a comfortable and memorable stay under the stars.
+                </p>
+                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Book a Campsite</a>
+            </div>
+        </section>
+
     </main>
 
     <!-- Contact Section -->
@@ -162,11 +164,11 @@
                         <label for="service-interest" class="block text-gray-700 text-sm font-semibold mb-2">Service of Interest</label>
                         <select id="service-interest" name="service-interest" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
                             <option>General Inquiry</option>
-                            <option>Custom & Bulk Orders</option>
                             <option>Artisan Workshops</option>
                             <option>Community & Cultural Tours</option>
                             <option>Kabana Stay</option>
                             <option>Local Tour Guides</option>
+                            <option>Camping Sites</option>
                         </select>
                     </div>
                     <div>
@@ -181,4 +183,4 @@
 
     <x-footer />
 </body>
-</html><a href="{{ url('/services') }}" class="{{ request()->is('services') ? 'text-green-700 font-bold border-green-700' : 'text-gray-600 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-700 transition duration-300">Services</a>
+</html>

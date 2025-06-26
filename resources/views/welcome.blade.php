@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
     body {
-        font-family: 'Inter', 'Knuckles products', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family: 'Inter', sans-serif;
         background-color: rgb(248, 248, 248);
         color: #333;
     }
@@ -159,7 +159,7 @@
 
         <div class="product-grid">
             <!-- Product Card: Kithul Jaggery -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600">
                 <img src="{{ asset('images/products/kithul-jaggery.jpg') }}" alt="Kithul Jaggery" class="product-img">
                 <div class="product-content">
                     <div>
@@ -174,7 +174,7 @@
             </div>
 
             <!-- Product Card: Kithul Juice -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600">
                 <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
                 <div class="product-content">
                     <div>
@@ -189,7 +189,7 @@
             </div>
 
             <!-- Product Card: Turmeric Powder -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600">
                 <img src="{{ asset('images/products/turmeric-powder.jpg') }}" alt="Turmeric Powder" class="product-img">
                 <div class="product-content">
                     <div>
@@ -204,7 +204,7 @@
             </div>
 
             <!-- Product Card: Community Hand Slippers -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600">
                 <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
                 <div class="product-content">
                     <div>
@@ -257,20 +257,7 @@
                 Beyond our products, we offer unique experiences and services that connect you directly with our community's culture and craftsmanship.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Service Card 1: Custom Orders -->
-                <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
-                    <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
-                        <svg class="w-10 h-10 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-green-800 mb-2">Custom & Bulk Orders</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Planning a special event or looking for unique corporate gifts? We offer custom and bulk ordering to meet your needs.
-                    </p>
-                        <a href="{{ url('/services#custom-orders') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Inquire Now &rightarrow;</a>
-                </div>
-
+                
                 <!-- Service Card 2: Workshops -->
                 <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
                     <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
@@ -327,6 +314,20 @@
                     </p>
                     <a href="{{ url('/services#tour-guide') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Find a Guide &rightarrow;</a>
                 </div>
+
+                <!-- Service Card 6: Camping Sites -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                    <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
+                        <svg class="w-10 h-10 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.362-3.797zM15.362 5.214C14.267 5.072 13.16 5 12 5c-1.16 0-2.267.072-3.362.214m6.724 0a3.375 3.375 0 013.375 3.375c0 1.623-1.093 3.023-2.588 3.543m-6.724 0c1.093-.52 2.588-1.92 2.588-3.543a3.375 3.375 0 013.375-3.375" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Camping Sites</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Connect with nature at our scenic camping sites. Enjoy stunning views and a peaceful retreat under the stars.
+                    </p>
+                    <a href="{{ url('/services#camping-sites') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Book a Site &rightarrow;</a>
+                </div>
             </div>
         </div>
     </section>
@@ -378,7 +379,12 @@
     <x-footer />
 
     <!-- Shopping Cart Modal/Section (Initially Hidden) -->
-    <div id="cart-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full flex items-center justify-center hidden z-[100]">
+    <!-- Notification Toast -->
+    <div id="cart-notification" class="fixed top-6 right-6 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-[-100%] opacity-0 transition-all duration-500 ease-in-out z-[101]">
+        Item added to cart!
+    </div>
+
+    <div id="cart-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full hidden z-[100]">
         <div class="relative mx-auto p-6 border w-full max-w-lg md:max-w-2xl shadow-xl rounded-lg bg-white">
             <div class="mt-3">
                 <div class="flex justify-between items-center mb-6">
@@ -468,16 +474,23 @@
             const openCartButton = document.getElementById('open-cart-button');
             const closeCartModalButton = document.getElementById('close-cart-modal');
             const continueShoppingButton = document.getElementById('continue-shopping-button');
+            const cartNotification = document.getElementById('cart-notification');
             const cartItemCountEl = document.getElementById('cart-item-count');
 
             // Function to open the cart modal
             function openCart() {
-                if (cartModal) cartModal.classList.remove('hidden');
+                if (cartModal) {
+                    cartModal.classList.remove('hidden');
+                    cartModal.classList.add('flex'); // Add flex when opening
+                }
             }
 
             // Function to close the cart modal
             function closeCart() {
-                if (cartModal) cartModal.classList.add('hidden');
+                if (cartModal) {
+                    cartModal.classList.add('hidden');
+                    cartModal.classList.remove('flex'); // Remove flex when closing
+                }
             }
 
             // Event Listeners for cart
@@ -570,7 +583,18 @@
                         cart[existingItemIndex].quantity++;
                     } else {
                         cart.push({ name: productName, price: parseFloat(productPrice), quantity: 1, image: productImage });
-                    }
+                }
+
+                // Show notification
+                if (cartNotification) {
+                    cartNotification.textContent = `${productName} added to cart!`;
+                    cartNotification.classList.remove('translate-y-[-100%]', 'opacity-0');
+                    cartNotification.classList.add('translate-y-0', 'opacity-100');
+                    setTimeout(() => {
+                        cartNotification.classList.remove('translate-y-0', 'opacity-100');
+                        cartNotification.classList.add('translate-y-[-100%]', 'opacity-0');
+                    }, 3000); // Hide after 3 seconds
+                }
                     updateCartDisplay();
                     // openCart(); // Optionally open cart when item is added
                 }

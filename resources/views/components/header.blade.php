@@ -10,7 +10,7 @@
         <nav class="flex justify-between items-center h-full">
             <!-- Left Section: Site Title (positioned to right of overlaid logo) -->
             <div class="w-1/3 pl-40" style="min-width: 0;">
-                <a href="{{ url('/') }}" class="hidden md:block text-2xl font-bold text-green-700 tracking-wide" style="font-family: 'Inter', 'Knuckles products', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; white-space: nowrap;">Knuckles Products</a>
+                <a href="{{ url('/') }}" class="hidden md:block text-2xl font-bold text-green-700 tracking-wide" style="font-family: 'Inter', sans-serif; white-space: nowrap;">Knuckles Products</a>
             </div>
 
             <!-- Right Section: Navigation Links, Cart, and Mobile Menu Button -->
@@ -22,7 +22,8 @@
                     <a href="{{ url('/how-its-made') }}" class="{{ request()->is('how-its-made') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">How It's Made</a>
                     <a href="{{ url('/services') }}" class="{{ request()->is('services') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Services</a>
                     <a href="{{ url('/our-story') }}" class="{{ request()->is('our-story') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Our Story</a>
-                    <a href="{{ url('/#contact') }}" class="text-gray-200 font-medium border-b-2 border-transparent pb-1 hover:text-green-400 transition duration-300">Contact</a>
+                    <a href="{{ url('/login') }}" class="{{ request()->is('login') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Login</a>
+                    <a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Contact</a>
                 </div>
                 <!-- Cart Icon (Adjusted for dark background) -->
                 <button id="open-cart-button" class="relative text-gray-200 hover:text-green-400">
@@ -46,7 +47,8 @@
             <a href="{{ url('/how-its-made') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">How It's Made</a>
             <a href="{{ url('/services') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Services</a>
             <a href="{{ url('/our-story') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Our Story</a>
-            <a href="{{ url('/#contact') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Contact</a>
+            <a href="{{ url('/login') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Login</a>
+            <a href="{{ url('/contact') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Contact</a>
         </div>
     </div>
 </header>

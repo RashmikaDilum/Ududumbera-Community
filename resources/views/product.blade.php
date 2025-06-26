@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knuckles Products - All Products</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.0"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Ududumbara Commiunity', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #f8f8f8; /* Light background */
             color: #333;
         }
@@ -236,6 +238,11 @@
         </div>
     </div>
 
+    <!-- Notification Toast -->
+    <div id="cart-notification" class="fixed top-6 right-6 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-[-100%] opacity-0 transition-all duration-500 ease-in-out z-[101]">
+        Item added to cart!
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Cart Modal Elements
@@ -243,6 +250,7 @@
             const openCartButton = document.getElementById('open-cart-button');
             const closeCartModalButton = document.getElementById('close-cart-modal');
             const continueShoppingButton = document.getElementById('continue-shopping-button');
+            const cartNotification = document.getElementById('cart-notification');
             const cartItemCountEl = document.getElementById('cart-item-count');
 
             // Function to open the cart modal
@@ -345,6 +353,17 @@
                     cart[existingItemIndex].quantity++;
                 } else {
                     cart.push({ name: productName, price: parseFloat(productPrice), quantity: 1, image: productImage });
+                } 
+                
+                // Show notification
+                if (cartNotification) {
+                    cartNotification.textContent = `${productName} added to cart!`;
+                    cartNotification.classList.remove('translate-y-[-100%]', 'opacity-0');
+                    cartNotification.classList.add('translate-y-0', 'opacity-100');
+                    setTimeout(() => {
+                        cartNotification.classList.remove('translate-y-0', 'opacity-100');
+                        cartNotification.classList.add('translate-y-[-100%]', 'opacity-0');
+                    }, 3000); // Hide after 3 seconds
                 }
                 updateCartDisplay();
                 // openCart(); // Optionally open cart when item is added

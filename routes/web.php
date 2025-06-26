@@ -18,3 +18,11 @@ Route::get('/our-story', function () {
 Route::get('/services', function () {
     return view('services');
 });
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
