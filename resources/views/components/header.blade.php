@@ -26,16 +26,34 @@
             <div class="flex-1"></div>
 
             <!-- Right Section: Cart, and Mobile Menu Button -->
-            <div class="w-auto flex items-center space-x-6 flex-shrink-0">
+            <div class="w-auto flex items-center space-x-4 md:space-x-10 flex-shrink-0">
                 <!-- Cart Icon -->
                 <button id="open-cart-button" class="relative text-gray-200 hover:text-green-400">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     <span id="cart-item-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
                 </button>
 
-                <!-- Login Link (moved to right of cart, visible on desktop) -->
-                <a href="{{ url('/login') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-full transition duration-300 hidden md:block text-sm whitespace-nowrap">Login</a>
+                @guest
+                    <!-- Login Link (visible on desktop) -->
+                    <a href="{{ url('/login') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-full transition duration-300 hidden md:block text-sm whitespace-nowrap">Login</a>
+                @endguest
 
+                @auth
+                    <!-- User Name and Logout (visible on desktop) -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="{{ route('dashboard') }}" class="text-gray-200 hover:text-green-400 transition-colors duration-200" title="Go to dashboard">
+                            <span class="md:hidden">Hi, {{ auth()->user()->first_name }}</span>
+                            <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span class="text-xs block mt-1">{{ auth()->user()->first_name }}</span>
+                        </a>
+                    </div>
+                @endauth
+
+                @auth
+                    <a href="{{ route('dashboard') }}" class="md:hidden text-gray-200 hover:text-green-400 transition-colors duration-200" title="Go to dashboard">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </a>
+                @endauth
                 <!-- Mobile Menu Button (Hamburger) (Adjusted for dark background) -->
                 <button id="mobile-menu-button" class="md:hidden text-gray-200 hover:text-green-400 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -52,7 +70,9 @@
             <a href="{{ url('/how-its-made') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">How It's Made</a>
             <a href="{{ url('/services') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Services</a>
             <a href="{{ url('/our-story') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Our Story</a>
-            <a href="{{ url('/login') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Login</a>
+            @guest
+                <a href="{{ url('/login') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Login</a>
+            @endauth
             <a href="{{ url('/contact') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Contact</a>
         </div>
     </div>

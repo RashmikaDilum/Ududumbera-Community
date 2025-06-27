@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Ududumbara Community</title>
+    <title>Register - Ududumbara Community</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8f8f8; /* Fallback background */
             color: #333;
-        }  
+        }
         html {
             scroll-behavior: smooth;
         }
@@ -58,45 +58,53 @@
                 <form action="{{ route('register') }}" method="POST" class="space-y-6">
                     @csrf
 
-                    <div>
-                        <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" value="{{ old('name') }}" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
-                               placeholder="John Doe" required autofocus>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first_name" class="block text-gray-700 text-sm font-semibold mb-2">First Name</label>
+                            <input type="text" id="first_name" name="first_name" value="{{ old('first_name') }}"
+                                   class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
+                                   placeholder="John" required autofocus>
+                        </div>
+                        <div>
+                            <label for="last_name" class="block text-gray-700 text-sm font-semibold mb-2">Last Name</label>
+                            <input type="text" id="last_name" name="last_name" value="{{ old('last_name') }}"
+                                   class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
+                                   placeholder="Doe" required>
+                        </div>
                     </div>
 
                     <div>
                         <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" value="{{ old('email') }}" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="email" id="email" name="email" value="{{ old('email') }}"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="you@example.com" required>
                     </div>
 
                     <div>
                         <label for="phone" class="block text-gray-700 text-sm font-semibold mb-2">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="tel" id="phone" name="phone" value="{{ old('phone') }}"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="+1234567890">
                     </div>
 
                     <div>
                         <label for="address" class="block text-gray-700 text-sm font-semibold mb-2">Address (Optional)</label>
-                        <textarea id="address" name="address" rows="2" 
-                                  class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <textarea id="address" name="address" rows="2"
+                                  class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                   placeholder="Your address">{{ old('address') }}</textarea>
                     </div>
 
                     <div>
                         <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
-                        <input type="password" id="password" name="password" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="password" id="password" name="password"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="••••••••" required>
                     </div>
 
                     <div>
                         <label for="password_confirmation" class="block text-gray-700 text-sm font-semibold mb-2">Confirm Password</label>
-                        <input type="password" id="password_confirmation" name="password_confirmation" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="password" id="password_confirmation" name="password_confirmation"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="••••••••" required>
                     </div>
 
@@ -119,7 +127,7 @@
                     </div>
 
                     <div class="mt-6">
-                        <a href="{{ route('google.redirect') }}" 
+                        <a href="{{ route('google.redirect') }}"
                            class="w-full inline-flex justify-center items-center px-4 py-3 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition duration-300">
                             <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24">
                                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>

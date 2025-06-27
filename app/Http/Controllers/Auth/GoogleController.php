@@ -25,20 +25,33 @@ class GoogleController extends Controller
     {
         try {
             $googleUser = Socialite::driver('google')->user();
-            
-            // Check if user already exists with this email
+
             $user = User::where('email', $googleUser->email)->first();
 
+            // Split name from Google into first and last name
+            $nameParts = explode(' ', $googleUser->name, 2);
+            $firstName = $nameParts[0];
+            $lastName = $nameParts[1] ?? '';
+
             if ($user) {
-                // Update Google ID if not set
+                // User exists, let's update their info if needed
+                $updateData = [];
                 if (!$user->google_id) {
-                    $user->google_id = $googleUser->id;
-                    $user->save();
+                    $updateData['google_id'] = $googleUser->id;
+                }
+                // If first_name is missing, populate it from Google
+                if (empty($user->first_name)) {
+                    $updateData['first_name'] = $firstName;
+                    $updateData['last_name'] = $lastName;
+                }
+                if (!empty($updateData)) {
+                    $user->update($updateData);
                 }
             } else {
                 // Create new user
                 $user = User::create([
-                    'name' => $googleUser->name,
+                    'first_name' => $firstName,
+                    'last_name' => $lastName,
                     'email' => $googleUser->email,
                     'google_id' => $googleUser->id,
                     'email_verified_at' => now(),
