@@ -9,27 +9,27 @@
             <div class="lg:col-span-2 text-center lg:text-left">
                 <div class="mb-6">
                     <a href="{{ url('/') }}" class="inline-flex items-center justify-center lg:justify-start space-x-3 mb-4">
-                        <img class="h-12 w-auto" src="{{ asset('images/logoo.png') }}" alt="Logo">
+                        <img class="h-40 w-auto" src="{{ asset('images/logoo.png') }}" alt="Logo">
                         <span class="font-bold text-xl text-white">Knuckles Products</span>
                     </a>
                     <p class="text-gray-300 leading-relaxed max-w-md mx-auto lg:mx-0">
                         Connecting you with authentic, handcrafted goods from the heart of Sri Lankan communities. Support local artisans and embrace tradition.
                     </p>
                 </div>
-                
+
                 <!-- Social Media -->
                 <div class="flex justify-center lg:justify-start space-x-4">
                     <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
-                        <i class="fab fa-facebook-f text-sm"></i>
+                        <img src="{{ asset('images/footer/facebook.png') }}"alt="icon" class="w-4 h-4 object-contain" />
                     </a>
                     <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
-                        <i class="fab fa-instagram text-sm"></i>
+                        <img src="{{ asset('images/footer/instagram.png') }}" alt="icon" class="w-4 h-4 object-contain" />
                     </a>
                     <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
-                        <i class="fab fa-x-twitter text-sm"></i>
+                        <img src="{{ asset('images/footer/twitter.png') }}" alt="icon" class="w-4 h-4 object-contain" />
                     </a>
                     <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
-                        <i class="fab fa-linkedin-in text-sm"></i>
+                        <img src="{{ asset('images/footer/linkdin.png') }}" alt="icon" class="w-4 h-4 object-contain" />
                     </a>
                 </div>
             </div>
