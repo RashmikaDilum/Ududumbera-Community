@@ -14,7 +14,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8f8f8; /* Fallback background */
             color: #333;
-        }
+        }  
         html {
             scroll-behavior: smooth;
         }
