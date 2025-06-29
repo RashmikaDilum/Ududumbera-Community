@@ -45,4 +45,30 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get cart items for this user.
+     */
+    public function cartItems()
+    {
+        return $this->hasMany(Cart::class);
+    }
+
+    /**
+     * Get total cart amount for this user.
+     */
+    public function getCartTotalAttribute(): float
+    {
+        return $this->cartItems->sum(function ($item) {
+            return $item->quantity * $item->price;
+        });
+    }
+
+    /**
+     * Get total cart items count for this user.
+     */
+    public function getCartItemsCountAttribute(): int
+    {
+        return $this->cartItems->sum('quantity');
+    }
 }

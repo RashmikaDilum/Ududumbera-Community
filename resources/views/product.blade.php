@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Knuckles Products - All Products</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
@@ -70,7 +71,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Product Card: Kithul Jaggery -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="1" data-product-id="1">
                 <img src="{{ asset('images/products/kithul-jaggery.jpg') }}" alt="Kithul Jaggery" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Pure Kithul Jaggery</h3>
@@ -83,7 +84,7 @@
             </div>
 
             <!-- Product Card: Kithul Juice -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="2">
                 <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Fresh Kithul Juice (Treacle)</h3>
@@ -96,7 +97,7 @@
             </div>
 
             <!-- Product Card: Turmeric Powder -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="3">
                 <img src="{{ asset('images/products/turmeric-powder.jpg') }}" alt="Turmeric Powder" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Organic Turmeric Powder</h3>
@@ -109,7 +110,7 @@
             </div>
 
             <!-- Product Card: Community Hand Slippers -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="4">
                 <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Woven Community Slippers</h3>
@@ -122,7 +123,7 @@
             </div>
 
             <!-- Product Card: Handwoven Basket (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="5">
                 <img src="https://placehold.co/600x400/D0F0C0/333333?text=Handwoven+Basket" alt="Handwoven Basket" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Handwoven Basket</h3>
@@ -135,7 +136,7 @@
             </div>
 
             <!-- Product Card: Clay Pottery Set (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="6">
                 <img src="https://placehold.co/600x400/C0E0F0/333333?text=Clay+Pottery+Set" alt="Clay Pottery Set" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Painted Clay Pottery</h3>
@@ -148,7 +149,7 @@
             </div>
 
             <!-- Product Card: Traditional Textile Scarf (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="7">
                 <img src="https://placehold.co/600x400/F0C0D0/333333?text=Textile+Scarf" alt="Traditional Textile Scarf" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Loomed Textile Scarf</h3>
@@ -161,7 +162,7 @@
             </div>
 
             <!-- Product Card: Artisan Wooden Carving (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="8">
                 <img src="https://placehold.co/600x400/C0D0E0/333333?text=Wooden+Carving" alt="Wooden Carving" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Artisan Wooden Carving</h3>
@@ -174,7 +175,7 @@
             </div>
 
             <!-- Product Card: Natural Handmade Soap (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="9">
                 <img src="https://placehold.co/600x400/E0C0F0/333333?text=Natural+Soap" alt="Natural Handmade Soap" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Natural Handmade Soap</h3>
@@ -212,10 +213,11 @@
                         const priceText = card.querySelector('.text-green-700.font-bold').textContent;
                         const price = parseFloat(priceText.replace('LKR ', '').trim());
                         const image = card.querySelector('img.product-img').src;
+                        const productId = card.getAttribute('data-product-id');
                         
                         // Call the global addToCart function from cart component
                         if (window.addToCart) {
-                            window.addToCart(name, price, image);
+                            window.addToCart(name, price, image, productId);
                         }
                     }
                 });

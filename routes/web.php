@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\CartController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -63,4 +64,20 @@ Route::middleware('auth')->group(function () {
     // Profile Routes
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+    // Cart Routes
+    Route::prefix('cart')->name('cart.')->group(function () {
+        Route::get('/', [CartController::class, 'index'])->name('index');
+        Route::post('/add', [CartController::class, 'store'])->name('add');
+        Route::put('/{id}', [CartController::class, 'update'])->name('update');
+        Route::delete('/{id}', [CartController::class, 'destroy'])->name('remove');
+        Route::delete('/', [CartController::class, 'clear'])->name('clear');
+        Route::get('/count', [CartController::class, 'count'])->name('count');
+        Route::post('/sync', [CartController::class, 'sync'])->name('sync');
+    });
 });
+
+// Public Cart Routes (for guest users to get count)
+Route::get('/cart/count', function () {
+    return response()->json(['count' => 0]);
+})->name('cart.public.count');

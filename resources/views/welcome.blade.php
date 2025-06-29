@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Sri Lankan Community Delights</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
@@ -159,7 +160,7 @@
 
         <div class="product-grid">
             <!-- Product Card: Kithul Jaggery -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600">
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="1">
                 <img src="{{ asset('images/products/kithul-jaggery.jpg') }}" alt="Kithul Jaggery" class="product-img">
                 <div class="product-content">
                     <div>
@@ -174,7 +175,7 @@
             </div>
 
             <!-- Product Card: Kithul Juice -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600">
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="2">
                 <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
                 <div class="product-content">
                     <div>
@@ -189,7 +190,7 @@
             </div>
 
             <!-- Product Card: Turmeric Powder -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600">
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="3">
                 <img src="{{ asset('images/products/turmeric-powder.jpg') }}" alt="Turmeric Powder" class="product-img">
                 <div class="product-content">
                     <div>
@@ -204,7 +205,7 @@
             </div>
 
             <!-- Product Card: Community Hand Slippers -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600">
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="4">
                 <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
                 <div class="product-content">
                     <div>
@@ -436,10 +437,11 @@
                         const priceText = card.querySelector('.text-green-700.font-bold').textContent;
                         const price = parseFloat(priceText.replace('LKR ', '').trim());
                         const image = card.querySelector('img.product-img').src;
+                        const productId = card.getAttribute('data-product-id');
                         
                         // Call the global addToCart function from cart component
                         if (window.addToCart) {
-                            window.addToCart(name, price, image);
+                            window.addToCart(name, price, image, productId);
                         }
                     }
                 });
@@ -449,5 +451,4 @@
 
     </body>
     </html>>
-                
-                            
+
