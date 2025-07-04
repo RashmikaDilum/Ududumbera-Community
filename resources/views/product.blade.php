@@ -56,10 +56,16 @@
     <x-header />
 
     <!-- Products Hero Section -->
-    <section class="relative py-20 md:py-32 text-center overflow-hidden bg-emerald-500">
-        <div class="container mx-auto">
+    <section class="relative py-20 md:py-32 text-center overflow-hidden text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('{{ asset('images/products.jpg') }}');"></div>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <div class="container mx-auto relative z-10 px-4">
             <h2 class="text-5xl font-extrabold mb-4">Discover Our Handcrafted Treasures</h2>
-            <p class="text-xl max-w-3xl mx-auto opacity-90">
+            <p class="text-xl max-w-3xl mx-auto opacity-95">
                 Explore our full collection of unique products, lovingly made by skilled artisans from various village communities. Each item tells a story of tradition, dedication, and craft.
             </p>
         </div>
@@ -83,11 +89,11 @@
                 </div>
             </div>
 
-            <!-- Product Card: Kithul Juice -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="2">
+            <!-- Product Card: Kithul Treacle (Juice) -->
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="2" data-product-id="2">
                 <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Fresh Kithul Juice (Treacle)</h3>
+                    <h3 class="font-semibold text-xl mb-2 text-green-800">Fresh Kithul Treacle</h3>
                     <p class="text-gray-600 text-sm mb-4">Liquid golden nectar, perfect as a topping or natural syrup, rich in traditional flavor.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-green-700 font-bold text-lg">LKR 700.00</span>
@@ -113,7 +119,7 @@
             <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="4">
                 <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Woven Community Slippers</h3>
+                    <h3 class="font-semibold text-xl mb-2 text-green-800">Community Slippers</h3>
                     <p class="text-gray-600 text-sm mb-4">Comfortable and stylish slippers, hand-crafted with natural fibers by skilled village artisans.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-green-700 font-bold text-lg">LKR 1200.00</span>
@@ -122,11 +128,11 @@
                 </div>
             </div>
 
-            <!-- Product Card: Handwoven Basket (from product.blade.php original) -->
+            <!-- Product Card: pepper (from product.blade.php original) -->
             <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="5">
-                <img src="https://placehold.co/600x400/D0F0C0/333333?text=Handwoven+Basket" alt="Handwoven Basket" class="product-img">
+                <img src="{{ asset('images/products/pepper.jpg') }}" alt="Handwoven Basket" class="product-img">
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Handwoven Basket</h3>
+                    <h3 class="font-semibold text-xl mb-2 text-green-800">Pepper (100g)</h3>
                     <p class="text-gray-600 text-sm mb-4">Artisans weave intricate patterns using natural fibers, perfect for home decor or storage.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-green-700 font-bold text-lg">LKR 1500.00</span>
@@ -136,7 +142,7 @@
             </div>
 
             <!-- Product Card: Clay Pottery Set (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="6">
+            {{-- <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="6">
                 <img src="https://placehold.co/600x400/C0E0F0/333333?text=Clay+Pottery+Set" alt="Clay Pottery Set" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Painted Clay Pottery</h3>
@@ -146,10 +152,10 @@
                         <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Product Card: Traditional Textile Scarf (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="7">
+            {{-- <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="7">
                 <img src="https://placehold.co/600x400/F0C0D0/333333?text=Textile+Scarf" alt="Traditional Textile Scarf" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Loomed Textile Scarf</h3>
@@ -159,10 +165,10 @@
                         <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Product Card: Artisan Wooden Carving (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="8">
+            {{-- <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="8">
                 <img src="https://placehold.co/600x400/C0D0E0/333333?text=Wooden+Carving" alt="Wooden Carving" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Artisan Wooden Carving</h3>
@@ -172,10 +178,10 @@
                         <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Product Card: Natural Handmade Soap (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="9">
+            {{-- <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="9">
                 <img src="https://placehold.co/600x400/E0C0F0/333333?text=Natural+Soap" alt="Natural Handmade Soap" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Natural Handmade Soap</h3>
@@ -185,7 +191,7 @@
                         <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </main>
 
@@ -214,7 +220,7 @@
                         const price = parseFloat(priceText.replace('LKR ', '').trim());
                         const image = card.querySelector('img.product-img').src;
                         const productId = card.getAttribute('data-product-id');
-                        
+
                         // Call the global addToCart function from cart component
                         if (window.addToCart) {
                             window.addToCart(name, price, image, productId);

@@ -60,14 +60,14 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-12 section-heading mx-auto">Our Story: Empowering Communities</h2>
             <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700 space-y-6">
                 <p>
-                    At Lanka Harvests, our journey began with a simple yet profound vision: to connect the rich, authentic products of Sri Lankan rural communities directly with discerning customers worldwide. We believe in sustainable practices, fair trade, and empowering the talented individuals who uphold generations of traditional craftsmanship and farming methods.
+                    Nestled within the Knuckles Conservation Area – a UNESCO World Heritage site in Sri Lanka – the villages of Kubukkgolla, Pussalla, and Meemure are home to communities who lead simple, traditional lives rooted in centuries-old customs. These communities depend on sustainable agriculture for their livelihoods, cultivating their home gardens and collecting various commercial forest products from the surrounding protected area.
                 </p>
-                <img src="https://placehold.co/800x450/b0d7c0/0a4d0f?text=Happy+Community+Members" alt="Community Empowerment" class="w-full rounded-xl shadow-md my-8">
+                <img src="{{ asset('images/happyCommiunityMenbers.jpg') }}" alt="Happy community members from the Knuckles Conservation Area" class="rounded-xl shadow-lg w-full h-auto">
                 <p>
-                    Every purchase from our store directly contributes to the livelihoods of these communities, helping to preserve traditional skills, support local economies, and ensure a brighter future for families. From the diligent Kithul tappers scaling ancient palms to the skilled hands weaving intricate slippers and the dedicated farmers nurturing vibrant turmeric, each product tells a story of heritage, hard work, and hope.
+                    Thanks to these unique conditions and practices, they produce naturally grown, chemical-free ingredients of exceptional quality. By applying modern processing techniques, these pure harvests are transformed into final products that retain their natural goodness, ensuring they are healthy and safe for consumers.
                 </p>
                 <p>
-                    We are more than just a marketplace; we are a bridge. A bridge that connects you to the heart of Sri Lanka, its authentic flavors, and its enduring traditions. Thank you for being a part of our story.
+                    This effort is part of a project supported by the United Nations Global Environment Facility Small Grants Programme. Through this initiative, we work with local farmers to bring these exceptional, sustainable products directly from their hands to yours — fostering friendship among nations while preserving the rich biodiversity of the Knuckles Range
                 </p>
             </div>
         </div>

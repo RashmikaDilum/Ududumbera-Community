@@ -45,40 +45,39 @@
         <div class="container max-w-[950px] mx-auto my-20 px-4 md:px-8 lg:px-4 text-white leading-relaxed">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-                <div class="max-w-2xl mx-auto text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore
-                    <div class="mt-2">et dolore magra aliqua. Ut enim ad minim veniam.</div>
+                <!-- Text Container -->
+                <div class="max-w-3xl mx-auto text-lg bg-black/20 p-6 rounded-lg shadow-lg">
+                    We'd love to hear from you! Whether you have a question about our products, services, or our community initiatives, please don't hesitate to get in touch. We are here to help and share our story.
                 </div>
             </div>
 
-            <div class="content flex flex-col md:flex-row mt-10">
-                <div class="col-1 w-full md:w-[530px] lg:w-[530px] pr-0 md:pr-8">
-                    <div class="address-line mt-10 flex items-start">
+            <div class="content flex flex-col md:flex-row mt-16 gap-8">
+                <div class="col-1 w-full md:w-auto bg-black/20 p-8 rounded-lg shadow-lg flex flex-col justify-center space-y-8">
+                    <div class="address-line flex items-start">
                         <img alt="location" src="{{ asset('images/contact/marker.png') }}" class="icon bg-white rounded-full p-4 w-14 h-14 object-contain">
                         <div class="contact-info pl-5 pt-1">
                             <div class="contact-info-title text-[#01bdd4] font-semibold text-lg">Address</div>
-                            <div>1002 West 5th Ave,</div>
-                            <div>Alaska, New York,</div>
-                            <div>55060.</div>
+                            <div>Ududumbara Community Collective,</div>
+                            <div>Knuckles Forest Range,</div>
+                            <div>Sri Lanka.</div>
                         </div>
                     </div>
-                    <div class="address-line mt-10 flex items-start">
+                    <div class="address-line flex items-start">
                         <img alt="phone" src="{{ asset('images/contact/phone.png') }}" class="icon bg-white rounded-full p-4 w-14 h-14 object-contain">
                         <div class="contact-info pl-5 pt-1">
                             <div class="contact-info-title text-[#01bdd4] font-semibold text-lg">Phone</div>
-                            <div>12523-4566-8954-8956.</div>
+                            <div>+94 77 123 4567</div>
                         </div>
                     </div>
-                    <div class="address-line mt-10 flex items-start">
+                    <div class="address-line flex items-start">
                         <img alt="mail" src="{{ asset('images/contact/mail.png') }}" class="icon bg-white rounded-full p-4 w-14 h-14 object-contain">
                         <div class="contact-info pl-5 pt-1">
                             <div class="contact-info-title text-[#01bdd4] font-semibold text-lg">Email</div>
-                            <div>contactemail@gmail.com</div>
+                            <div>info@ududumbara.community</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-2 flex-1 bg-white/80 backdrop-blur-sm mt-10 md:mt-0 rounded-lg shadow-lg">
+                <div class="col-2 flex-1 bg-white/40 backdrop-blur-lg rounded-lg shadow-lg">
                     <form class="h-full flex flex-col">
                         <div class="form-container text-black p-8 flex-1">
                             <h2 class="text-2xl font-bold mb-6">Send Message</h2>
@@ -91,7 +90,7 @@
                             <div class="form-row pb-8">
                                 <label class="block text-gray-700 text-sm font-semibold mb-2">Email</label>
                                 <div>
-                                    <input type="email" name="email" class="form-field w-full border-none border-b border-black focus:outline-none focus:border-green-500 pb-2 bg-transparent" placeholder="your.email@example.com">
+                                    <input type="email" name="email" class="form-field w-full border-none border-b border-black focus:outline-none focus:border-green-500 pb-2 bg-transparent" placeholder="Your Email Address">
                                 </div>
                             </div>
                             <div class="form-row pb-8">

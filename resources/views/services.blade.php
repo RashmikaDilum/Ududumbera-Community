@@ -46,10 +46,17 @@
     <x-header />
 
     <!-- Services Hero Section -->
-    <section class="relative py-20 md:py-32 text-center overflow-hidden bg-emerald-500 text-white">
-        <div class="container mx-auto px-4">
+
+    <section class="relative py-20 md:py-32 text-center overflow-hidden text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('{{ asset('images/main.jpg') }}');"></div>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <div class="container mx-auto relative z-10 px-4">
             <h2 class="text-5xl font-extrabold mb-4">Our Community Services</h2>
-            <p class="text-xl max-w-3xl mx-auto opacity-90">
+            <p class="text-xl max-w-3xl mx-auto opacity-95">
                 Experience the heart of Sri Lankan culture through our unique services, designed to connect you with our artisans and their traditions.
             </p>
         </div>
@@ -61,7 +68,7 @@
         <!-- Service 2: Artisan Workshops -->
         <section id="workshops" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-                <img src="{{ asset('images/services/workshops.jpg') }}" alt="Artisan Workshops" class="rounded-xl shadow-lg w-full h-96 object-cover">
+                <img src="{{ asset('images/services/artisan_worksop.png') }}" alt="Artisan Workshops" class="rounded-xl shadow-lg w-full h-96 object-cover">
             </div>
             <div>
                 <h3 class="text-3xl font-bold text-green-800 mb-4">Artisan Workshops</h3>
@@ -88,14 +95,14 @@
                 <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Schedule a Tour</a>
             </div>
             <div class="order-1 md:order-2">
-                <img src="{{ asset('images/services/tours.jpg') }}" alt="Cultural Tours" class="rounded-xl shadow-lg w-full h-96 object-cover">
+                <img src="{{ asset('images/services/tours.png') }}" alt="Cultural Tours" class="rounded-xl shadow-lg w-full h-96 object-cover">
             </div>
         </section>
 
         <!-- Service 4: Kabana Stay -->
         <section id="kabana-stay" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-                <img src="{{ asset('images/services/kabana-stay.jpg') }}" alt="Kabana Stay" class="rounded-xl shadow-lg w-full h-96 object-cover">
+                <img src="{{ asset('images/services/kabana.png') }}" alt="Kabana Stay" class="rounded-xl shadow-lg w-full h-96 object-cover">
             </div>
             <div>
                 <h3 class="text-3xl font-bold text-green-800 mb-4">Kabana Stay</h3>
@@ -122,14 +129,14 @@
                 <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Find Your Guide</a>
             </div>
             <div class="order-1 md:order-2">
-                <img src="{{ asset('images/services/tour-guide.jpg') }}" alt="Tour Guide" class="rounded-xl shadow-lg w-full h-96 object-cover">
+                <img src="{{ asset('images/services/tour_guide.png') }}" alt="Tour Guide" class="rounded-xl shadow-lg w-full h-96 object-cover">
             </div>
         </section>
 
         <!-- Service 6: Camping Sites -->
         <section id="camping-sites" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-                <img src="{{ asset('images/services/camping.jpg') }}" alt="Camping Sites" class="rounded-xl shadow-lg w-full h-96 object-cover">
+                <img src="{{ asset('images/services/camping_sites.png') }}" alt="Camping Sites" class="rounded-xl shadow-lg w-full h-96 object-cover">
             </div>
             <div>
                 <h3 class="text-3xl font-bold text-green-800 mb-4">Scenic Camping Sites</h3>

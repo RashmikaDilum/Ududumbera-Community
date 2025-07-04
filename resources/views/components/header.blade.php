@@ -15,10 +15,10 @@
             <!-- Desktop Navigation Links (Centered) -->
             <div class="space-x-6 md:flex hidden flex-shrink-0">
                 <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Home</a>
-                <a href="{{ url('/our-story') }}" class="{{ request()->is('our-story') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300 hidden md:block">Our Story</a>
                 <a href="{{ url('/products') }}" class="{{ request()->is('products') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Products</a>
-                <a href="{{ url('/how-its-made') }}" class="{{ request()->is('how-its-made') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">How It's Made</a>
                 <a href="{{ url('/services') }}" class="{{ request()->is('services') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Services</a>
+                <a href="{{ url('/how-its-made') }}" class="{{ request()->is('how-its-made') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">How It's Made</a>
+                <a href="{{ url('/our-story') }}" class="{{ request()->is('our-story') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300 hidden md:block">Our Story</a>
                 <a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Contact</a>
             </div>
 
