@@ -40,12 +40,38 @@
 
                 @auth
                     <!-- User Name and Logout (visible on desktop) -->
-                    <div class="hidden md:flex items-center space-x-4">
+                    <div class="hidden md:flex items-center space-x-4 relative group">
                         <a href="{{ route('dashboard') }}" class="text-gray-200 hover:text-green-400 transition-colors duration-200" title="Go to dashboard">
                             <span class="md:hidden">Hi, {{ auth()->user()->first_name }}</span>
                             <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             <span class="text-xs block mt-1">{{ auth()->user()->first_name }}</span>
                         </a>
+                        
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full right-0 mt-2 w-48 bg-black/80 backdrop-blur-sm border border-white/10 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="{{ route('dashboard') }}" class="block px-4 py-2 text-sm text-gray-200 hover:bg-white/10 hover:text-white transition-colors duration-200">
+                                    <div class="flex items-center space-x-2">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                        </svg>
+                                        <span>Profile Settings</span>
+                                    </div>
+                                </a>
+                                <hr class="border-white/10 my-1">
+                                <form method="POST" action="{{ route('logout') }}" class="block">
+                                    @csrf
+                                    <button type="submit" class="w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-white/10 hover:text-white transition-colors duration-200">
+                                        <div class="flex items-center space-x-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                                            </svg>
+                                            <span>Logout</span>
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 @endauth
 
@@ -72,6 +98,13 @@
             <a href="{{ url('/our-story') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Our Story</a>
             @guest
                 <a href="{{ url('/login') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Login</a>
+            @endauth
+            @auth
+                <a href="{{ route('dashboard') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Profile Settings</a>
+                <form method="POST" action="{{ route('logout') }}" class="block">
+                    @csrf
+                    <button type="submit" class="w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Logout</button>
+                </form>
             @endauth
             <a href="{{ url('/contact') }}" class="block w-full text-left py-2 px-4 text-gray-200 hover:bg-white/10 hover:text-white rounded-md transition duration-300">Contact</a>
         </div>

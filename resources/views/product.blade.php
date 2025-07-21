@@ -77,7 +77,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Product Card: Kithul Jaggery -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="1" data-product-id="1">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="2" data-product-id="2">
                 <img src="{{ asset('images/products/kithul-jaggery.jpg') }}" alt="Kithul Jaggery" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Pure Kithul Jaggery</h3>
@@ -90,7 +90,7 @@
             </div>
 
             <!-- Product Card: Kithul Treacle (Juice) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="2" data-product-id="2">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="3" data-product-id="3">
                 <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Fresh Kithul Treacle</h3>
@@ -103,7 +103,7 @@
             </div>
 
             <!-- Product Card: Turmeric Powder -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="3">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="4" data-product-id="4">
                 <img src="{{ asset('images/products/turmeric-powder.jpg') }}" alt="Turmeric Powder" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Organic Turmeric Powder</h3>
@@ -116,7 +116,7 @@
             </div>
 
             <!-- Product Card: Community Hand Slippers -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="4">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="5" data-product-id="5">
                 <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Community Slippers</h3>
@@ -129,11 +129,11 @@
             </div>
 
             <!-- Product Card: pepper (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="5">
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="6" data-product-id="6">
                 <img src="{{ asset('images/products/pepper.jpg') }}" alt="Handwoven Basket" class="product-img">
                 <div class="p-6">
                     <h3 class="font-semibold text-xl mb-2 text-green-800">Pepper (100g)</h3>
-                    <p class="text-gray-600 text-sm mb-4">Artisans weave intricate patterns using natural fibers, perfect for home decor or storage.</p>
+                    <p class="text-gray-600 text-sm mb-4">Premium quality black pepper, hand-harvested and sun-dried for maximum flavor and aroma.</p>
                     <div class="flex justify-between items-center">
                         <span class="text-green-700 font-bold text-lg">LKR 1500.00</span>
                         <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>

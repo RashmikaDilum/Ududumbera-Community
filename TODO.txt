@@ -1,0 +1,14 @@
+When the profile logo hovering popup your profile and logout button..!
+Complete the checkout button
+
+
+
+
+
+
+
+
+
+
+// Isues------ //
+Cart continue shopping not work

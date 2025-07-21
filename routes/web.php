@@ -76,8 +76,3 @@ Route::middleware('auth')->group(function () {
         Route::post('/sync', [CartController::class, 'sync'])->name('sync');
     });
 });
-
-// Public Cart Routes (for guest users to get count)
-Route::get('/cart/count', function () {
-    return response()->json(['count' => 0]);
-})->name('cart.public.count');

@@ -37,9 +37,9 @@
                 <button id="continue-shopping-button" class="w-full md:w-auto px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium rounded-lg transition duration-150">
                     Continue Shopping
                 </button>
-                <button id="checkout-button" class="w-full md:w-auto px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition duration-150">
+                <a href="https://sandbox.payhere.lk/pay/ofd20c4fe" id="checkout-button" target="_blank" rel="noopener" class="w-full md:w-auto px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition duration-150 text-center flex items-center justify-center">
                     Checkout
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -71,6 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check if user is authenticated
     const isAuthenticated = {{ auth()->check() ? 'true' : 'false' }};
 
+    // Initial cart count load for all users
+    if (isAuthenticated) {
+        getCartCount();
+    } else {
+        // For guest users, load count from localStorage
+        loadGuestCartCount();
+    }
+
     // Function to open the cart modal
     function openCart() {
         if (cartModal) {
@@ -92,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
         openCartButton.addEventListener('click', () => {
             if (isAuthenticated) {
                 loadCartFromServer();
+            } else {
+                loadGuestCart();
             }
             openCart();
         });
@@ -118,7 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Cart Logic ---
-    window.cart = window.cart || []; // Local cart array for guest users
+    // Initialize guest cart from localStorage
+    function getGuestCart() {
+        return JSON.parse(localStorage.getItem('guestCart') || '[]');
+    }
+
+    function saveGuestCart(cart) {
+        localStorage.setItem('guestCart', JSON.stringify(cart));
+    }
     const cartItemsContainer = document.getElementById('cart-items-container');
     const emptyCartMessage = document.getElementById('empty-cart-message');
     const cartSubtotalEl = document.getElementById('cart-subtotal');
@@ -134,8 +151,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
+        console.log('Making request to:', url);
+        console.log('Request options:', { ...defaultOptions, ...options });
+        console.log('CSRF Token:', csrfToken);
+
         const response = await fetch(url, { ...defaultOptions, ...options });
+        console.log('Response status:', response.status);
+        console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+        
         const data = await response.json();
+        console.log('Response data:', data);
 
         if (!response.ok) {
             throw new Error(data.error || 'Request failed');
@@ -166,6 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add item to server cart
     async function addToServerCart(productId, quantity = 1) {
         try {
+            console.log('Making request to /cart/add with:', { product_id: productId, quantity: quantity });
             const data = await makeRequest('/cart/add', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -174,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             });
 
+            console.log('Server response:', data);
             await loadCartFromServer(); // Refresh cart display
             return data;
         } catch (error) {
@@ -224,6 +251,26 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCartCount(0);
             return 0;
         }
+    }
+
+    // Load guest cart count from localStorage
+    function loadGuestCartCount() {
+        const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
+        const count = guestCart.reduce((total, item) => total + item.quantity, 0);
+        updateCartCount(count);
+        return count;
+    }
+
+    // Load guest cart data for display
+    function loadGuestCart() {
+        const guestCart = getGuestCart();
+        let subtotal = 0;
+        let totalItems = 0;
+        guestCart.forEach(item => {
+            subtotal += item.price * item.quantity;
+            totalItems += item.quantity;
+        });
+        updateCartDisplay(guestCart, subtotal, totalItems);
     }
 
     function updateCartDisplay(items = [], total = 0, totalItems = 0) {
@@ -303,20 +350,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Global cart functions
     window.addToCart = async function(productName, productPrice, productImage, productId = null) {
+        console.log('addToCart called with:', { productName, productPrice, productImage, productId });
+        console.log('User authenticated:', isAuthenticated);
         if (isAuthenticated && productId) {
             try {
+                console.log('Adding to server cart with productId:', productId);
                 await addToServerCart(productId);
                 showNotification(`${productName} added to cart!`);
             } catch (error) {
+                console.error('Error adding to cart:', error);
                 showNotification(error.message || 'Failed to add item to cart', 'error');
             }
         } else {
             // Local storage for guest users
-            const existingItemIndex = window.cart.findIndex(item => item.name === productName);
+            const guestCart = getGuestCart();
+            const existingItemIndex = guestCart.findIndex(item => item.name === productName);
             if (existingItemIndex > -1) {
-                window.cart[existingItemIndex].quantity++;
+                guestCart[existingItemIndex].quantity++;
             } else {
-                window.cart.push({ 
+                guestCart.push({ 
                     name: productName, 
                     price: parseFloat(productPrice), 
                     quantity: 1, 
@@ -325,15 +377,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
             
+            // Save to localStorage
+            saveGuestCart(guestCart);
+            
             // Calculate totals
             let subtotal = 0;
             let totalItems = 0;
-            window.cart.forEach(item => {
+            guestCart.forEach(item => {
                 subtotal += item.price * item.quantity;
                 totalItems += item.quantity;
             });
             
-            updateCartDisplay(window.cart, subtotal, totalItems);
+            updateCartDisplay(guestCart, subtotal, totalItems);
+            updateCartCount(totalItems);
             showNotification(`${productName} added to cart!`);
         }
     }
@@ -352,16 +408,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             // Handle local cart
-            const index = window.cart.findIndex(item => item.product_id == itemId || item.name == itemId);
+            const guestCart = getGuestCart();
+            const index = guestCart.findIndex(item => item.product_id == itemId || item.name == itemId);
             if (index > -1) {
-                window.cart[index].quantity = newQuantity;
+                guestCart[index].quantity = newQuantity;
+                saveGuestCart(guestCart);
+                
                 let subtotal = 0;
                 let totalItems = 0;
-                window.cart.forEach(item => {
+                guestCart.forEach(item => {
                     subtotal += item.price * item.quantity;
                     totalItems += item.quantity;
                 });
-                updateCartDisplay(window.cart, subtotal, totalItems);
+                updateCartDisplay(guestCart, subtotal, totalItems);
+                updateCartCount(totalItems);
             }
         }
     }
@@ -376,16 +436,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             // Handle local cart
-            const index = window.cart.findIndex(item => item.product_id == itemId || item.name == itemId);
+            const guestCart = getGuestCart();
+            const index = guestCart.findIndex(item => item.product_id == itemId || item.name == itemId);
             if (index > -1) {
-                window.cart.splice(index, 1);
+                guestCart.splice(index, 1);
+                saveGuestCart(guestCart);
+                
                 let subtotal = 0;
                 let totalItems = 0;
-                window.cart.forEach(item => {
+                guestCart.forEach(item => {
                     subtotal += item.price * item.quantity;
                     totalItems += item.quantity;
                 });
-                updateCartDisplay(window.cart, subtotal, totalItems);
+                updateCartDisplay(guestCart, subtotal, totalItems);
+                updateCartCount(totalItems);
                 showNotification('Item removed from cart');
             }
         }
