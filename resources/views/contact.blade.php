@@ -57,8 +57,8 @@
                         <img alt="location" src="{{ asset('images/contact/marker.png') }}" class="icon bg-white rounded-full p-4 w-14 h-14 object-contain">
                         <div class="contact-info pl-5 pt-1">
                             <div class="contact-info-title text-[#01bdd4] font-semibold text-lg">Address</div>
-                            <div>Ududumbara Community Collective,</div>
-                            <div>Knuckles Forest Range,</div>
+                            <div>No 167,Kubukgolla,</div>
+                            <div>Meemure,</div>
                             <div>Sri Lanka.</div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                         <img alt="phone" src="{{ asset('images/contact/phone.png') }}" class="icon bg-white rounded-full p-4 w-14 h-14 object-contain">
                         <div class="contact-info pl-5 pt-1">
                             <div class="contact-info-title text-[#01bdd4] font-semibold text-lg">Phone</div>
-                            <div>+94 77 123 4567</div>
+                            <div>+94 74 081 2723</div>
                         </div>
                     </div>
                     <div class="address-line flex items-start">

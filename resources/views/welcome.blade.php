@@ -16,14 +16,14 @@
         background-color: rgb(248, 248, 248);
         color: #333;
     }
-    
+
     /* Browser compatibility reset */
     *, *::before, *::after {
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
-    
+
     /* Fix for Chrome flexbox interpretation */
     .product-grid {
         display: grid;
@@ -31,13 +31,13 @@
         gap: 2rem;
         max-width: 100%;
     }
-    
+
     @media (min-width: 768px) {
         .product-grid {
             grid-template-columns: repeat(2, 1fr);
         }
     }
-    
+
     @media (min-width: 1024px) {
         .product-grid {
             grid-template-columns: repeat(4, 1fr);
@@ -45,7 +45,7 @@
             margin: 0 auto;
         }
     }
-    
+
     /* Product card fixed dimensions */
     .product-card {
         width: 100%;
@@ -56,7 +56,7 @@
         height: auto;
         min-height: 450px;
     }
-    
+
     .product-img {
         width: 100%;
         height: 250px;
@@ -65,7 +65,7 @@
         border-radius: 0.75rem;
         flex-shrink: 0;
     }
-    
+
     .product-content {
         flex: 1;
         display: flex;
@@ -73,19 +73,19 @@
         justify-content: space-between;
         padding: 1.5rem;
     }
-    
+
     /* Custom scroll-to animation */
     html {
         scroll-behavior: smooth;
     }
-    
+
     /* Custom button styling for hover effects */
     .btn-primary {
         transition: all 0.3s ease;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
     }
-    
+
     .btn-primary:hover {
         transform: translateY(-2px);
         -webkit-transform: translateY(-2px);
@@ -94,13 +94,13 @@
         -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-    
+
     .section-heading {
         position: relative;
         display: inline-block;
         padding-bottom: 8px;
     }
-    
+
     .section-heading::after {
         content: '';
         position: absolute;
@@ -136,7 +136,7 @@
 
         <!-- Content -->
         <div class="container mx-auto px-4 relative z-10">
-            <h1 class="text-4xl md:text-6xl text-white font-extrabold leading-tight mb-6">Authentic Sri Lankan Delights & Handcrafted Treasures</h1>
+            <h1 class="text-4xl md:text-6xl text-white font-extrabold leading-tight mb-6">Authentic Sri Lankan Delights & Treasures</h1>
             <p class="text-lg text-white md:text-xl mb-10 max-w-3xl mx-auto">Savor the rich taste of tradition and experience the beauty of community-made products, sustainably sourced from the heart of Sri Lanka.</p>
             <a href="{{ url('/products') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-primary">Explore Our Products</a>
         </div>
@@ -258,7 +258,7 @@
                 Beyond our products, we offer unique experiences and services that connect you directly with our community's culture and craftsmanship.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                
+
                 <!-- Service Card 2: Workshops -->
                 <div class="text-center p-8 bg-gray-50 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
                     <div class="mb-4 inline-block p-4 bg-green-100 rounded-full">
@@ -367,7 +367,7 @@
             <div class="text-center text-gray-600 mt-8">
                 <p>Email: <a href="mailto:info@lankaharvests.com" class="text-green-700 hover:underline">info@lankaharvests.com</a></p>
                 <p>Phone: +94 XX XXX XXXX</p>
-                <p>Follow Us: 
+                <p>Follow Us:
                     <a href="#" class="text-green-700 hover:text-green-800 mx-2"><svg class="inline-block w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.247 0-1.64.773-1.64 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
                     <a href="#" class="text-green-700 hover:text-green-800 mx-2"><svg class="inline-block w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.002 3.797.048.843.04 1.144.109 1.523.272.474.205.786.679.996 1.176.222.5.27.847.275 2.759v.007c0 4.29-2.652 7.789-6.237 8.56.06.635.1.96.1 1.29 0 1.957-.66 2.21-1.29 2.21-.247 0-.52-.028-.73-.047-.381-.035-1.173-.107-1.472-.258-.298-.151-.594-.474-.917-.936-.323-.462-.562-.894-.592-1.343-.028-.448-.02-1.09.02-2.316.035-1.226.062-1.767.118-2.227.114-.46.305-.758.536-.985.23-.227.502-.344.976-.413.395-.06.843-.1 1.705-.138 2.029-.009 2.379-.009 3.841.062 1.34.062 2.22.18 2.502.324.298.15.547.464.761.933.214.468.27.848.275 2.766v.007a.274.274 0 01-.27.27h-4.507c-.495 0-.895-.4-.895-.895v-3.773h.907c.496 0 .895-.4.895-.895a.895.895 0 00-.895-.895h-.907V7.078h.923c.496 0 .895-.4.895-.895a.895.895 0 00-.895-.895h-.923V4.288c0-1.912-.047-2.259-.275-2.759-.22-.497-.532-.97-.996-1.176-.379-.163-.68-.232-1.523-.272C14.866 2.002 14.512 2 12.082 2h-.001zm-3.11 3.23c-1.343 0-2.434 1.104-2.434 2.46s1.091 2.46 2.434 2.46 2.434-1.104 2.434-2.46-1.091-2.46-2.434-2.46z" clip-rule="evenodd" /></svg></a>
                     <a href="#" class="text-green-700 hover:text-green-800 mx-2"><svg class="inline-block w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.162 5.602c-.628.278-1.3.465-2.002.55.723-.434 1.278-1.12 1.538-1.942-.676.4-1.42.69-2.216.85.63-1.054.346-2.39-1.265-2.924C16.92 1.058 15.65 1 14.31 1.018c-2.336.012-4.223 1.916-4.212 4.254.004.34.037.674.098 1.002C6.91 6.136 3.996 4.54 1.91 1.836c-.352.607-.547 1.307-.547 2.037 0 1.405.717 2.646 1.808 3.375-.667-.02-1.296-.205-1.848-.508v.025c0 2.072 1.467 3.805 3.414 4.195-.36.096-.74.148-1.134.148-.278 0-.547-.027-.81-.073.54 1.704 2.113 2.94 3.97 2.972C9.444 17.575 7.6 18.25 5.56 18.25c-.356 0-.705-.02-.857-.047 1.884 1.21 4.12 1.917 6.543 1.917 7.848 0 12.128-6.52 12.128-12.128v-.546c.83-.598 1.545-1.34 2.112-2.193z"/></svg></a>
@@ -438,7 +438,7 @@
                         const price = parseFloat(priceText.replace('LKR ', '').trim());
                         const image = card.querySelector('img.product-img').src;
                         const productId = card.getAttribute('data-product-id');
-                        
+
                         // Call the global addToCart function from cart component
                         if (window.addToCart) {
                             window.addToCart(name, price, image, productId);
@@ -450,5 +450,5 @@
     </script>
 
     </body>
-    </html>>
+    </html>
 
