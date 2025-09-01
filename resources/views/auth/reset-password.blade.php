@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
     <title>Reset Password - Ududumbara Community</title>
+    <meta name="title" content="Reset Password - Ududumbara Community">
+    <meta name="description" content="Set a new password for your Ududumbara Community account. Secure your account with a strong new password.">
+    <meta name="keywords" content="Ududumbara Community password reset, new password, account security">
+    <meta name="author" content="Ududumbara Community">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Reset Password - Ududumbara Community">
+    <meta property="og:description" content="Set a new password for your Ududumbara Community account. Secure your account with a strong new password.">
+    <meta property="og:image" content="{{ asset('images/contact/bg.jpg') }}">
+    <meta property="og:site_name" content="Ududumbara Community">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Reset Password - Ududumbara Community">
+    <meta property="twitter:description" content="Set a new password for your Ududumbara Community account. Secure your account with a strong new password.">
+    <meta name="twitter:image" content="{{ asset('images/contact/bg.jpg') }}">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="LK">
+    <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
+    <meta name="theme-color" content="#008000">
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,28 +86,28 @@
 
                 <form action="{{ route('password.update') }}" method="POST" class="space-y-6">
                     @csrf
-                    
+
                     <!-- Password Reset Token -->
                     <input type="hidden" name="token" value="{{ $token }}">
 
                     <div>
                         <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" value="{{ $email ?? old('email') }}" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="email" id="email" name="email" value="{{ $email ?? old('email') }}"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="you@example.com" required>
                     </div>
 
                     <div>
                         <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">New Password</label>
-                        <input type="password" id="password" name="password" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="password" id="password" name="password"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="••••••••" required>
                     </div>
 
                     <div>
                         <label for="password_confirmation" class="block text-gray-700 text-sm font-semibold mb-2">Confirm New Password</label>
-                        <input type="password" id="password_confirmation" name="password_confirmation" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="password" id="password_confirmation" name="password_confirmation"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="••••••••" required>
                     </div>
 

@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
     <title>Our Services - Ududumbara Community</title>
+    <meta name="title" content="Our Services - Ududumbara Community">
+    <meta name="description" content="Experience authentic Sri Lankan culture through our community services. Artisan workshops, cultural tours, camping sites, and guided experiences in the Knuckles Conservation Area.">
+    <meta name="keywords" content="Sri Lankan cultural tours, artisan workshops, camping sites, guided tours, Knuckles Conservation Area, community services, sustainable tourism, cultural experiences">
+    <meta name="author" content="Ududumbara Community">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Our Services - Ududumbara Community">
+    <meta property="og:description" content="Experience authentic Sri Lankan culture through our community services. Artisan workshops, cultural tours, camping sites, and guided experiences in the Knuckles Conservation Area.">
+    <meta property="og:image" content="{{ asset('images/main.jpg') }}">
+    <meta property="og:site_name" content="Ududumbara Community">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Our Services - Ududumbara Community">
+    <meta property="twitter:description" content="Experience authentic Sri Lankan culture through our community services. Artisan workshops, cultural tours, camping sites, and guided experiences in the Knuckles Conservation Area.">
+    <meta property="twitter:image" content="{{ asset('images/main.jpg') }}">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="LK">
+    <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
+    <meta name="theme-color" content="#008000">
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">

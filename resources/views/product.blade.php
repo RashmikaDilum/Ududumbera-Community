@@ -4,7 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Knuckles Products - All Products</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Knuckles Products - All Products | Ududumbara Community</title>
+    <meta name="title" content="Knuckles Products - All Products | Ududumbara Community">
+    <meta name="description" content="Shop authentic Sri Lankan products from the Knuckles Conservation Area. Kithul Jaggery, Turmeric Powder, Handwoven Slippers, and more handcrafted treasures.">
+    <meta name="keywords" content="Kithul Jaggery, Kithul Treacle, Turmeric Powder, Handwoven Slippers, Sri Lankan products, organic spices, handcrafted goods, Knuckles Conservation Area">
+    <meta name="author" content="Ududumbara Community">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Knuckles Products - All Products | Ududumbara Community">
+    <meta property="og:description" content="Shop authentic Sri Lankan products from the Knuckles Conservation Area. Kithul Jaggery, Turmeric Powder, Handwoven Slippers, and more handcrafted treasures.">
+    <meta property="og:image" content="{{ asset('images/products.jpg') }}">
+    <meta property="og:site_name" content="Ududumbara Community">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Knuckles Products - All Products | Ududumbara Community">
+    <meta property="twitter:description" content="Shop authentic Sri Lankan products from the Knuckles Conservation Area. Kithul Jaggery, Turmeric Powder, Handwoven Slippers, and more handcrafted treasures.">
+    <meta property="twitter:image" content="{{ asset('images/products.jpg') }}">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="LK">
+    <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
+    <meta name="theme-color" content="#008000">
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">

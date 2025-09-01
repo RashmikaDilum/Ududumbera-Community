@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
     <title>Forgot Password - Ududumbara Community</title>
+    <meta name="title" content="Forgot Password - Ududumbara Community">
+    <meta name="description" content="Reset your Ududumbara Community account password. Enter your email to receive a secure password reset link.">
+    <meta name="keywords" content="Ududumbara Community password reset, forgot password, account recovery">
+    <meta name="author" content="Ududumbara Community">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Forgot Password - Ududumbara Community">
+    <meta property="og:description" content="Reset your Ududumbara Community account password. Enter your email to receive a secure password reset link.">
+    <meta property="og:image" content="{{ asset('images/contact/bg.jpg') }}">
+    <meta property="og:site_name" content="Ududumbara Community">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Forgot Password - Ududumbara Community">
+    <meta property="twitter:description" content="Reset your Ududumbara Community account password. Enter your email to receive a secure password reset link.">
+    <meta property="twitter:image" content="{{ asset('images/contact/bg.jpg') }}">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="LK">
+    <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
+    <meta name="theme-color" content="#008000">
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,8 +96,8 @@
 
                     <div>
                         <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" value="{{ old('email') }}" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="email" id="email" name="email" value="{{ old('email') }}"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="you@example.com" required autofocus>
                     </div>
 

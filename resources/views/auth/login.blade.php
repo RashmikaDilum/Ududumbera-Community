@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
     <title>Login - Ududumbara Community</title>
+    <meta name="title" content="Login - Ududumbara Community">
+    <meta name="description" content="Sign in to your Ududumbara Community account. Access your dashboard, manage your profile, and explore our community products and services.">
+    <meta name="keywords" content="Ududumbara Community login, sign in, user authentication, community member access">
+    <meta name="author" content="Ududumbara Community">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Login - Ududumbara Community">
+    <meta property="og:description" content="Sign in to your Ududumbara Community account. Access your dashboard, manage your profile, and explore our community products and services.">
+    <meta property="og:image" content="{{ asset('images/contact/bg.jpg') }}">
+    <meta property="og:site_name" content="Ududumbara Community">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Login - Ududumbara Community">
+    <meta property="twitter:description" content="Sign in to your Ududumbara Community account. Access your dashboard, manage your profile, and explore our community products and services.">
+    <meta property="twitter:image" content="{{ asset('images/contact/bg.jpg') }}">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="LK">
+    <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
+    <meta name="theme-color" content="#008000">
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +44,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8f8f8; /* Fallback background */
             color: #333;
-        }  
+        }
         html {
             scroll-behavior: smooth;
         }
@@ -67,15 +97,15 @@
 
                     <div>
                         <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" value="{{ old('email') }}" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="email" id="email" name="email" value="{{ old('email') }}"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="you@example.com" required autofocus>
                     </div>
 
                     <div>
                         <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
-                        <input type="password" id="password" name="password" 
-                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent" 
+                        <input type="password" id="password" name="password"
+                               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-transparent"
                                placeholder="••••••••" required>
                     </div>
 
@@ -106,7 +136,7 @@
                     </div>
 
                     <div class="mt-6">
-                        <a href="{{ route('google.redirect') }}" 
+                        <a href="{{ route('google.redirect') }}"
                            class="w-full inline-flex justify-center items-center px-4 py-3 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition duration-300">
                             <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24">
                                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>

@@ -68,7 +68,7 @@
         <!-- Bottom Section -->
         <div class="border-t border-gray-700 pt-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-                <p class="mb-4 md:mb-0">&copy; {{ date('Y') }} Ududumbara Community. All rights reserved.</p>
+                <p class="mb-4 md:mb-0">&copy; {{ date('Y') }} Knuckles Products. All rights reserved.</p>
                 <div class="flex space-x-6">
                     <a href="#" class="hover:text-green-400 transition-colors duration-200">Privacy Policy</a>
                     <a href="#" class="hover:text-green-400 transition-colors duration-200">Terms of Service</a>

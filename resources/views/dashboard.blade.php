@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
     <title>Dashboard - Ududumbara Community</title>
+    <meta name="title" content="Dashboard - Ududumbara Community">
+    <meta name="description" content="Access your Ududumbara Community account dashboard. Manage your profile, view account information, and explore our community products and services.">
+    <meta name="keywords" content="Ududumbara Community dashboard, user account, profile management, community member portal">
+    <meta name="author" content="Ududumbara Community">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Dashboard - Ududumbara Community">
+    <meta property="og:description" content="Access your Ududumbara Community account dashboard. Manage your profile, view account information, and explore our community products and services.">
+    <meta property="og:image" content="{{ asset('images/main.jpg') }}">
+    <meta property="og:site_name" content="Ududumbara Community">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Dashboard - Ududumbara Community">
+    <meta property="twitter:description" content="Access your Ududumbara Community account dashboard. Manage your profile, view account information, and explore our community products and services.">
+    <meta property="twitter:image" content="{{ asset('images/main.jpg') }}">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="LK">
+    <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
+    <meta name="theme-color" content="#008000">
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">

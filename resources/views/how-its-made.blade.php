@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How It's Made - Knuckles Products</title>
+
+    <!-- Primary Meta Tags -->
+    <title>How It's Made - Knuckles Products | Ududumbara Community</title>
+    <meta name="title" content="How It's Made - Knuckles Products | Ududumbara Community">
+    <meta name="description" content="Discover the traditional craftsmanship behind our Knuckles products. Learn about Kithul tapping, turmeric processing, and handwoven slipper making from Sri Lankan artisans.">
+    <meta name="keywords" content="Kithul tapping process, turmeric processing, handwoven slippers, traditional craftsmanship, Sri Lankan artisans, Knuckles Conservation Area, sustainable production">
+    <meta name="author" content="Ududumbara Community">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="How It's Made - Knuckles Products | Ududumbara Community">
+    <meta property="og:description" content="Discover the traditional craftsmanship behind our Knuckles products. Learn about Kithul tapping, turmeric processing, and handwoven slipper making from Sri Lankan artisans.">
+    <meta property="og:image" content="{{ asset('images/hero/kithulTapping.jpg') }}">
+    <meta property="og:site_name" content="Ududumbara Community">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="How It's Made - Knuckles Products | Ududumbara Community">
+    <meta property="twitter:description" content="Discover the traditional craftsmanship behind our Knuckles products. Learn about Kithul tapping, turmeric processing, and handwoven slipper making from Sri Lankan artisans.">
+    <meta property="twitter:image" content="{{ asset('images/hero/kithulTapping.jpg') }}">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="LK">
+    <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
+    <meta name="theme-color" content="#008000">
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +106,7 @@
                 <!-- Turmeric & Slippers Making Process -->
                 <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition duration-300">
                     <h3 class="text-2xl font-bold text-green-800 mb-4">Handcrafted Excellence: Turmeric & Slippers</h3>
-                    
+
                     <!-- Turmeric Process -->
                     <div class="mb-8">
                         <h4 class="text-xl font-semibold text-gray-700 mb-2">From Root to Golden Spice: Our Turmeric</h4>
