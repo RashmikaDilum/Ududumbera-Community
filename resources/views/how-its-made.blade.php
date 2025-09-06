@@ -93,7 +93,9 @@
                 <!-- Kithul Making Process -->
                 <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition duration-300">
                     <h3 class="text-2xl font-bold text-green-800 mb-4">The Art of Kithul Tapping</h3>
-                    <img src="{{ asset('images/hero/kithulTapping.jpg') }}" alt="Kithul Tapping" class="rounded-lg mb-6 shadow-sm">
+                    <div class="mb-6">
+                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/iOfuZl-y2qc?autoplay=1&mute=1" title="Kithul Tapping Process" frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg shadow-sm"></iframe>
+                    </div>
                     <p class="text-gray-700 mb-4 leading-relaxed">
                         Kithul products begin with the ancient practice of Kithul palm tapping. Generations of knowledge are passed down as skilled tappers carefully climb the majestic Kithul tree to collect its precious sap. This sap, a naturally sweet and nutritious liquid, is then meticulously processed.
                     </p>

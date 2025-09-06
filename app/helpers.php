@@ -527,3 +527,23 @@ if (! function_exists('with')) {
     }
 }
 
+if (! function_exists('getCartItemCount')) {
+    /**
+     * Get the cart item count for the authenticated user.
+     *
+     * @return int
+     */
+    function getCartItemCount()
+    {
+        if (!auth()->check()) {
+            return 0;
+        }
+
+        try {
+            return \App\Models\Cart::where('user_id', auth()->id())->sum('quantity');
+        } catch (\Exception $e) {
+            return 0;
+        }
+    }
+}
+
