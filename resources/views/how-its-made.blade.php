@@ -105,33 +105,45 @@
                     <a href="{{ url('/products') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Discover Kithul Products &rightarrow;</a>
                 </div>
 
-                <!-- Turmeric & Slippers Making Process -->
+                <!-- Turmeric Process -->
                 <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition duration-300">
-                    <h3 class="text-2xl font-bold text-green-800 mb-4">Handcrafted Excellence: Turmeric & Slippers</h3>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">From Root to Golden Spice: Our Turmeric</h3>
+                    <img src="{{ asset('images/hero/Tumeric.jpg') }}" alt="Turmeric Processing" class="w-full rounded-lg mb-4 shadow-sm">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Our organic turmeric is cultivated in fertile Sri Lankan soils. After careful harvesting, the turmeric rhizomes are cleaned, boiled, dried in the sun, and then ground into a vibrant, aromatic powder. This traditional method preserves its potent flavor and beneficial properties, ensuring you receive the purest spice.
+                    </p>
+                    <a href="{{ url('/products') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Shop Turmeric &rightarrow;</a>
+                </div>
+            </div>
 
-                    <!-- Turmeric Process -->
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold text-gray-700 mb-2">From Root to Golden Spice: Our Turmeric</h4>
-                        <img src="{{ asset('images/hero/Tumeric.jpg') }}" alt="Turmeric Processing" class="w-full rounded-lg mb-4 shadow-sm">
-                        <p class="text-gray-700 leading-relaxed">
-                            Our organic turmeric is cultivated in fertile Sri Lankan soils. After careful harvesting, the turmeric rhizomes are cleaned, boiled, dried in the sun, and then ground into a vibrant, aromatic powder. This traditional method preserves its potent flavor and beneficial properties, ensuring you receive the purest spice.
-                        </p>
-                    </div>
-
-                    <!-- Hand Slippers Process -->
-                    <div>
-                        <h4 class="text-xl font-semibold text-gray-700 mb-2">Weaving Comfort: Community Hand Slippers</h4>
-                        <img src="{{ asset('images/hero/Slipers.jpg') }}" alt="Slipper Making" class="w-full rounded-lg mb-4 shadow-sm">
-                        <p class="text-gray-700 leading-relaxed">
+            <!-- Slippers & Pepper Process -->
+            <div class="container mx-auto px-4 mt-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Slippers Process -->
+                    <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition duration-300">
+                        <h3 class="text-2xl font-bold text-green-800 mb-4">Weaving Comfort: Community Hand Slippers</h3>
+                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/VQl6Mp2KbgM?autoplay=1&mute=1" title="Slipper Making Process" frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg shadow-sm"></iframe>
+                        <p class="text-gray-700 leading-relaxed mb-4">
                             Each pair of our hand slippers is a testament to the skill and dedication of local artisans. Using locally sourced natural fibers, they meticulously weave and craft each component. This traditional hand-making process not only creates unique, comfortable footwear but also provides sustainable livelihoods for families within our community.
                         </p>
+                        <a href="{{ url('/products') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Shop Handcrafted Slippers &rightarrow;</a>
                     </div>
-                    <a href="{{ url('/products') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Shop Handcrafted Goods &rightarrow;</a>
+                    <!-- Pepper Drying Process -->
+                    <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition duration-300">
+                        <h3 class="text-2xl font-bold text-green-800 mb-4"> Pepper Drying</h3>
+                        <iframe width="100%" height="350" src="https://youtube.com/embed/ZHg6WFzIFpg?autoplay=1&mute=1" title="pepper drying Process" frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg shadow-sm"></iframe>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our pepper is harvested at peak ripeness and dried using age-old methods under the Sri Lankan sun. This natural drying process preserves the pepper’s robust flavor and aroma, ensuring a premium spice for your kitchen. Local farmers carefully monitor the drying to maintain quality and support sustainable agriculture in our community.
+                        </p>
+                        <a href="{{ url('/products') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Shop Dryed pepper &rightarrow;</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <x-footer />
+</body>
+</html>
 </body>
 </html>
