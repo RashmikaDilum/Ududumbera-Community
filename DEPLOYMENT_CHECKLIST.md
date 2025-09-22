@@ -210,3 +210,4 @@ php artisan optimize:clear
 - [ ] Storage and cache directories secured
 
 
+

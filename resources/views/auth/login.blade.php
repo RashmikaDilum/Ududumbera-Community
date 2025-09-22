@@ -150,7 +150,7 @@
                 </div>
 
                 <div class="text-center mt-6 text-gray-700">
-                    Don't have an account? <a href="{{ route('register') }}" class="text-green-600 hover:underline">Register here</a>
+                    Don't have an account? <a href="/register" class="text-blue-600 hover:underline">Register here</a>
                 </div>
             </div>
         </main>
