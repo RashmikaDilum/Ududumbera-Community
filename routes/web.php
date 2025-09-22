@@ -40,6 +40,7 @@ Route::middleware('guest')->group(function () {
     // Registration Routes
     Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
     Route::post('/register', [AuthController::class, 'register']);
+    Route::get('/regy', [AuthController::class, 'regy']);
 
     // Password Reset Routes
     Route::get('/forgot-password', [PasswordResetController::class, 'showForgotPasswordForm'])->name('password.request');

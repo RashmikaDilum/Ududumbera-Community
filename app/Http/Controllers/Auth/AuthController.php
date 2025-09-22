@@ -19,6 +19,11 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
+    public function regy()
+    {
+        return view('auth.regy');
+    }
+
     /**
      * Show the registration form
      */
