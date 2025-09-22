@@ -58,16 +58,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         /* Test form specific styling */
-        .test-badge {
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+
     </style>
 </head>
 <body class="text-gray-800 relative">
@@ -83,13 +74,10 @@
 
         <main class="flex-grow flex items-center justify-center py-12 px-4">
             <div class="bg-white/85 backdrop-blur-sm p-8 rounded-lg shadow-xl w-full max-w-lg text-black">
-                <!-- Test Badge -->
-                <div class="flex justify-center mb-4">
-                    <span class="test-badge">Test Registration</span>
-                </div>
 
-                <h2 class="text-3xl font-bold text-center mb-4 text-green-800">Create Test Account</h2>
-                <p class="text-center text-gray-700 mb-8">Fill out this test form to create your account.</p>
+
+                <h2 class="text-3xl font-bold text-center mb-4 text-green-800">Create a New Account</h2>
+                <p class="text-center text-gray-700 mb-8">Fill out this form to create your account.</p>
 
                 <!-- Validation Errors -->
                 @if ($errors->any())
@@ -197,7 +185,7 @@
                     <!-- Submit Button -->
                     <div>
                         <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-6 rounded-md transition duration-300 btn-primary">
-                            Create Test Account
+                            Create Account
                         </button>
                     </div>
                 </form>
@@ -233,12 +221,6 @@
                     Already have an account? <a href="{{ route('login') }}" class="text-green-600 hover:underline font-medium">Sign in here</a>
                 </div>
 
-                <!-- Test Notice -->
-                <div class="mt-6 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
-                    <p class="text-xs text-yellow-800 text-center">
-                        <strong>Test Form:</strong> This is a test registration form. All data entered will be processed normally.
-                    </p>
-                </div>
             </div>
         </main>
 
