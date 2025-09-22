@@ -209,3 +209,4 @@ php artisan optimize:clear
 - [ ] .env file not accessible via web
 - [ ] Storage and cache directories secured
 
+
