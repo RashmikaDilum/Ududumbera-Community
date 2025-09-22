@@ -10,7 +10,7 @@
                     </svg>
                 </button>
             </div>
-            
+
             <div id="cart-items-container" class="my-5 max-h-96 overflow-y-auto pr-2 text-sm text-gray-600">
                 <!-- Empty cart message -->
                 <div id="empty-cart-message" class="text-center py-8 text-gray-500">
@@ -21,7 +21,7 @@
                     <p class="text-sm mt-1">Add some products to get started!</p>
                 </div>
             </div>
-            
+
             <div id="cart-summary" class="border-t pt-6">
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-lg font-semibold text-gray-800">Subtotal:</span>
@@ -32,7 +32,7 @@
                     <span id="cart-total" class="text-xl font-bold text-green-600">LKR 0.00</span>
                 </div>
             </div>
-            
+
             <div class="items-center px-4 py-3 mt-8 space-y-3 md:space-y-0 md:flex md:space-x-4 md:justify-end">
                 <button id="continue-shopping-button" class="w-full md:w-auto px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium rounded-lg transition duration-150">
                     Continue Shopping
@@ -48,6 +48,20 @@
 <!-- Notification Toast -->
 <div id="cart-notification" class="fixed top-6 right-6 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-[-100%] opacity-0 transition-all duration-500 ease-in-out z-[101]">
     Item added to cart!
+</div>
+
+
+<!-- Login Prompt Toast -->
+<div id="login-prompt-notification" class="fixed top-6 right-6 bg-blue-600 text-white px-6 py-4 rounded-lg shadow-lg transform translate-y-[-100%] opacity-0 transition-all duration-500 ease-in-out z-[101] max-w-sm">
+    <div class="flex items-center justify-between">
+        <div class="flex-1">
+            <p class="font-semibold mb-1">Login Required</p>
+            <p class="text-sm opacity-90">You need to log in first to add products to cart</p>
+        </div>
+        <button id="login-prompt-btn" class="ml-4 bg-white text-blue-600 px-3 py-1 rounded text-sm font-semibold hover:bg-blue-50 transition-colors">
+            Login
+        </button>
+    </div>
 </div>
 
 <script>
@@ -127,6 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Login prompt button event listener
+    const loginPromptBtn = document.getElementById('login-prompt-btn');
+    if (loginPromptBtn) {
+        loginPromptBtn.addEventListener('click', () => {
+            window.location.href = '/login';
+        });
+    }
+
     // --- Cart Logic ---
     // Initialize guest cart from localStorage
     function getGuestCart() {
@@ -158,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const response = await fetch(url, { ...defaultOptions, ...options });
         console.log('Response status:', response.status);
         console.log('Response headers:', Object.fromEntries(response.headers.entries()));
-        
+
         const data = await response.json();
         console.log('Response data:', data);
 
@@ -337,10 +359,10 @@ document.addEventListener('DOMContentLoaded', () => {
             cartNotification.className = `fixed top-6 right-6 px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out z-[101] ${
                 type === 'error' ? 'bg-red-600' : 'bg-green-600'
             } text-white`;
-            
+
             cartNotification.classList.remove('translate-y-[-100%]', 'opacity-0');
             cartNotification.classList.add('translate-y-0', 'opacity-100');
-            
+
             setTimeout(() => {
                 cartNotification.classList.remove('translate-y-0', 'opacity-100');
                 cartNotification.classList.add('translate-y-[-100%]', 'opacity-0');
@@ -348,10 +370,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function showLoginPromptNotification() {
+        const loginPromptNotification = document.getElementById('login-prompt-notification');
+        if (loginPromptNotification) {
+            loginPromptNotification.classList.remove('translate-y-[-100%]', 'opacity-0');
+            loginPromptNotification.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                loginPromptNotification.classList.remove('translate-y-0', 'opacity-100');
+                loginPromptNotification.classList.add('translate-y-[-100%]', 'opacity-0');
+            }, 5000); // Show for 5 seconds
+        }
+    }
+
     // Global cart functions
     window.addToCart = async function(productName, productPrice, productImage, productId = null) {
         console.log('addToCart called with:', { productName, productPrice, productImage, productId });
         console.log('User authenticated:', isAuthenticated);
+
+        // Check if user is authenticated
+        if (!isAuthenticated) {
+            // Show login prompt toast
+            showLoginPromptNotification();
+            return;
+        }
+
         if (isAuthenticated && productId) {
             try {
                 console.log('Adding to server cart with productId:', productId);
@@ -361,36 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error adding to cart:', error);
                 showNotification(error.message || 'Failed to add item to cart', 'error');
             }
-        } else {
-            // Local storage for guest users
-            const guestCart = getGuestCart();
-            const existingItemIndex = guestCart.findIndex(item => item.name === productName);
-            if (existingItemIndex > -1) {
-                guestCart[existingItemIndex].quantity++;
-            } else {
-                guestCart.push({ 
-                    name: productName, 
-                    price: parseFloat(productPrice), 
-                    quantity: 1, 
-                    image: productImage,
-                    product_id: productId 
-                });
-            }
-            
-            // Save to localStorage
-            saveGuestCart(guestCart);
-            
-            // Calculate totals
-            let subtotal = 0;
-            let totalItems = 0;
-            guestCart.forEach(item => {
-                subtotal += item.price * item.quantity;
-                totalItems += item.quantity;
-            });
-            
-            updateCartDisplay(guestCart, subtotal, totalItems);
-            updateCartCount(totalItems);
-            showNotification(`${productName} added to cart!`);
         }
     }
 
@@ -413,7 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index > -1) {
                 guestCart[index].quantity = newQuantity;
                 saveGuestCart(guestCart);
-                
+
                 let subtotal = 0;
                 let totalItems = 0;
                 guestCart.forEach(item => {
@@ -441,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index > -1) {
                 guestCart.splice(index, 1);
                 saveGuestCart(guestCart);
-                
+
                 let subtotal = 0;
                 let totalItems = 0;
                 guestCart.forEach(item => {
