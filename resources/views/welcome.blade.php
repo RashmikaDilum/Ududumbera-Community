@@ -191,10 +191,14 @@
         <div class="product-grid">
             <!-- Product Card: Kithul Jaggery -->
             <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="1">
-                <img src="{{ asset('images/products/kithul-jaggery.jpg') }}" alt="Kithul Jaggery" class="product-img">
+                <a href="{{ route('products.show', 'pure-kithul-jaggery') }}">
+                    <img src="{{ asset('images/products/kithul-jaggery.jpg') }}" alt="Kithul Jaggery" class="product-img">
+                </a>
                 <div class="product-content">
                     <div>
-                        <h3 class="font-semibold text-xl mb-2 text-green-800">Pure Kithul Jaggery</h3>
+                        <a href="{{ route('products.show', 'pure-kithul-jaggery') }}">
+                            <h3 class="font-semibold text-xl mb-2 text-green-800 hover:text-green-600 transition duration-300">Pure Kithul Jaggery</h3>
+                        </a>
                         <p class="text-gray-600 text-sm mb-4">A natural sweetener with a unique caramel flavor, traditionally made from the sap of the Kithul palm.</p>
                     </div>
                     <div class="flex justify-between items-center">
@@ -206,10 +210,14 @@
 
             <!-- Product Card: Kithul Juice -->
             <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="2">
-                <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
+                <a href="{{ route('products.show', 'fresh-kithul-treacle') }}">
+                    <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
+                </a>
                 <div class="product-content">
                     <div>
-                        <h3 class="font-semibold text-xl mb-2 text-green-800">Fresh Kithul Juice (Treacle)</h3>
+                        <a href="{{ route('products.show', 'fresh-kithul-treacle') }}">
+                            <h3 class="font-semibold text-xl mb-2 text-green-800 hover:text-green-600 transition duration-300">Fresh Kithul Juice (Treacle)</h3>
+                        </a>
                         <p class="text-gray-600 text-sm mb-4">Liquid golden nectar, perfect as a topping or natural syrup, rich in traditional flavor.</p>
                     </div>
                     <div class="flex justify-between items-center">
@@ -221,10 +229,14 @@
 
             <!-- Product Card: Turmeric Powder -->
             <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="3">
-                <img src="{{ asset('images/products/turmeric-powder.jpg') }}" alt="Turmeric Powder" class="product-img">
+                <a href="{{ route('products.show', 'organic-turmeric-powder') }}">
+                    <img src="{{ asset('images/products/turmeric-powder.jpg') }}" alt="Turmeric Powder" class="product-img">
+                </a>
                 <div class="product-content">
                     <div>
-                        <h3 class="font-semibold text-xl mb-2 text-green-800">Organic Turmeric Powder</h3>
+                        <a href="{{ route('products.show', 'organic-turmeric-powder') }}">
+                            <h3 class="font-semibold text-xl mb-2 text-green-800 hover:text-green-600 transition duration-300">Organic Turmeric Powder</h3>
+                        </a>
                         <p class="text-gray-600 text-sm mb-4">Pure, potent turmeric, hand-processed by local farmers for maximum flavor and health benefits.</p>
                     </div>
                     <div class="flex justify-between items-center">
@@ -236,10 +248,14 @@
 
             <!-- Product Card: Community Hand Slippers -->
             <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="4">
-                <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
+                <a href="{{ route('products.show', 'community-slippers') }}">
+                    <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
+                </a>
                 <div class="product-content">
                     <div>
-                        <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Woven Community Slippers</h3>
+                        <a href="{{ route('products.show', 'community-slippers') }}">
+                            <h3 class="font-semibold text-xl mb-2 text-green-800 hover:text-green-600 transition duration-300">Hand-Woven Community Slippers</h3>
+                        </a>
                         <p class="text-gray-600 text-sm mb-4">Comfortable and stylish slippers, hand-crafted with natural fibers by skilled village artisans.</p>
                     </div>
                     <div class="flex justify-between items-center">

@@ -106,122 +106,41 @@
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">All Available Products</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Product Card: Kithul Jaggery -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="1" data-product-id="1">
-                <img src="{{ asset('images/products/kithul-jaggery.jpg') }}" alt="Kithul Jaggery" class="product-img">
+            @forelse($products as $product)
+            <!-- Product Card: {{ $product->name }} -->
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="{{ $product->id }}">
+                <a href="{{ route('products.show', $product->slug) }}">
+                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="product-img">
+                </a>
                 <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Pure Kithul Jaggery</h3>
-                    <p class="text-gray-600 text-sm mb-4">A natural sweetener with a unique caramel flavor, traditionally made from the sap of the Kithul palm.</p>
+                    <a href="{{ route('products.show', $product->slug) }}">
+                        <h3 class="font-semibold text-xl mb-2 text-green-800 hover:text-green-600 transition duration-300">{{ $product->name }}</h3>
+                    </a>
+                    <p class="text-gray-600 text-sm mb-4">{{ Str::limit($product->description, 100) }}</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 850.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
+                        @if($product->sale_price)
+                            <div class="flex flex-col">
+                                <span class="text-green-700 font-bold text-lg">LKR {{ number_format($product->sale_price, 2) }}</span>
+                                <span class="text-gray-500 text-sm line-through">LKR {{ number_format($product->price, 2) }}</span>
+                            </div>
+                        @else
+                            <span class="text-green-700 font-bold text-lg">LKR {{ number_format($product->price, 2) }}</span>
+                        @endif
+                        
+                        @if($product->isAvailable())
+                            <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
+                        @else
+                            <span class="text-gray-500 text-sm">Out of Stock</span>
+                        @endif
                     </div>
                 </div>
             </div>
-
-            <!-- Product Card: Kithul Treacle (Juice) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="2" data-product-id="2">
-                <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Fresh Kithul Treacle</h3>
-                    <p class="text-gray-600 text-sm mb-4">Liquid golden nectar, perfect as a topping or natural syrup, rich in traditional flavor.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 700.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
+            @empty
+            <div class="col-span-full text-center py-12">
+                <p class="text-gray-600 text-lg">No products available at the moment.</p>
+                <p class="text-gray-500 text-sm mt-2">Please check back later for our amazing handcrafted products!</p>
             </div>
-
-            <!-- Product Card: Turmeric Powder -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="3" data-product-id="3">
-                <img src="{{ asset('images/products/turmeric-powder.jpg') }}" alt="Turmeric Powder" class="product-img">
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Organic Turmeric Powder</h3>
-                    <p class="text-gray-600 text-sm mb-4">Pure, potent turmeric, hand-processed by local farmers for maximum flavor and health benefits.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 450.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card: Community Hand Slippers -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="4" data-product-id="4">
-                <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Community Slippers</h3>
-                    <p class="text-gray-600 text-sm mb-4">Comfortable and stylish slippers, hand-crafted with natural fibers by skilled village artisans.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 1200.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card: pepper (from product.blade.php original) -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" id="5" data-product-id="5">
-                <img src="{{ asset('images/products/pepper.jpg') }}" alt="Handwoven Basket" class="product-img">
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Pepper (100g)</h3>
-                    <p class="text-gray-600 text-sm mb-4">Premium quality black pepper, hand-harvested and sun-dried for maximum flavor and aroma.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 1500.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Card: Clay Pottery Set (from product.blade.php original) -->
-            {{-- <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="6">
-                <img src="https://placehold.co/600x400/C0E0F0/333333?text=Clay+Pottery+Set" alt="Clay Pottery Set" class="product-img">
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Painted Clay Pottery</h3>
-                    <p class="text-gray-600 text-sm mb-4">Unique, lead-free pottery sets, each piece a canvas of cultural stories.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 2500.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-            </div> --}}
-
-            <!-- Product Card: Traditional Textile Scarf (from product.blade.php original) -->
-            {{-- <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="7">
-                <img src="https://placehold.co/600x400/F0C0D0/333333?text=Textile+Scarf" alt="Traditional Textile Scarf" class="product-img">
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Hand-Loomed Textile Scarf</h3>
-                    <p class="text-gray-600 text-sm mb-4">Soft, vibrantly colored scarves woven on traditional looms, unique and elegant.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 1800.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-            </div> --}}
-
-            <!-- Product Card: Artisan Wooden Carving (from product.blade.php original) -->
-            {{-- <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="8">
-                <img src="https://placehold.co/600x400/C0D0E0/333333?text=Wooden+Carving" alt="Wooden Carving" class="product-img">
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Artisan Wooden Carving</h3>
-                    <p class="text-gray-600 text-sm mb-4">Intricately carved wooden figurines, each telling a story of local folklore.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 2200.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-            </div> --}}
-
-            <!-- Product Card: Natural Handmade Soap (from product.blade.php original) -->
-            {{-- <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="9">
-                <img src="https://placehold.co/600x400/E0C0F0/333333?text=Natural+Soap" alt="Natural Handmade Soap" class="product-img">
-                <div class="p-6">
-                    <h3 class="font-semibold text-xl mb-2 text-green-800">Natural Handmade Soap</h3>
-                    <p class="text-gray-600 text-sm mb-4">Organic soaps made with local herbs and oils, gentle on skin and eco-friendly.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 600.00</span>
-                        <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-            </div> --}}
+            @endforelse
         </div>
     </main>
 
@@ -245,9 +164,10 @@
                 button.addEventListener('click', () => {
                     const card = button.closest('.bg-gray-50'); // Product card container
                     if (card) {
-                        const name = card.querySelector('h3').textContent;
-                        const priceText = card.querySelector('.text-green-700.font-bold').textContent;
-                        const price = parseFloat(priceText.replace('LKR ', '').trim());
+                        const name = card.querySelector('h3').textContent.trim();
+                        const priceElement = card.querySelector('.text-green-700.font-bold');
+                        const priceText = priceElement.textContent;
+                        const price = parseFloat(priceText.replace('LKR ', '').replace(',', '').trim());
                         const image = card.querySelector('img.product-img').src;
                         const productId = card.getAttribute('data-product-id');
 
@@ -262,3 +182,5 @@
     </script>
 </body>
 </html>
+
+

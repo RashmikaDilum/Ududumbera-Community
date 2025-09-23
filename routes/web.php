@@ -6,14 +6,16 @@ use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
-    return view('welcome');
+    $featuredProducts = App\Models\Product::active()->inStock()->featured()->take(4)->get();
+    return view('welcome', compact('featuredProducts'));
 });
 
-Route::get('/products', function () {
-    return view('product');
-});
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+Route::get('/product/{slug}', [ProductController::class, 'show'])->name('products.show');
 
 Route::get('/how-its-made', function () {
     return view('how-its-made');
