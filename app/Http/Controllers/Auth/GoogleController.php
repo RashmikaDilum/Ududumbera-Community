@@ -38,8 +38,13 @@ class GoogleController extends Controller
             if ($user) {
                 // User exists, let's update their info if needed
                 $updateData = [];
-                if (!$user->google_id) {
-                    $updateData['google_id'] = $googleUser->id;
+                if (!$user->provider_id || $user->provider_name !== 'google') {
+                    $updateData['provider_id'] = $googleUser->id;
+                    $updateData['provider_name'] = 'google';
+                    $updateData['provider_token'] = $googleUser->token;
+                    if (isset($googleUser->refreshToken)) {
+                        $updateData['provider_refresh_token'] = $googleUser->refreshToken;
+                    }
                 }
                 // If first_name is missing, populate it from Google
                 if (empty($user->first_name)) {
@@ -55,7 +60,10 @@ class GoogleController extends Controller
                     'first_name' => $firstName,
                     'last_name' => $lastName,
                     'email' => $googleUser->email,
-                    'google_id' => $googleUser->id,
+                    'provider_id' => $googleUser->id,
+                    'provider_name' => 'google',
+                    'provider_token' => $googleUser->token,
+                    'provider_refresh_token' => $googleUser->refreshToken ?? null,
                     'email_verified_at' => now(),
                     'password' => Hash::make(Str::random(16)), // Random password
                 ]);

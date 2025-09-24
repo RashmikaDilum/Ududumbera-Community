@@ -23,7 +23,10 @@ class User extends Authenticatable
         'password',
         'phone',
         'address',
-        'google_id',
+        'provider_id',
+        'provider_name',
+        'provider_token',
+        'provider_refresh_token',
         'email_verified_at',
     ];
 

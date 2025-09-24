@@ -20,6 +20,7 @@
                 <a href="{{ url('/how-its-made') }}" class="{{ request()->is('how-its-made') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">How It's Made</a>
                 <a href="{{ url('/our-story') }}" class="{{ request()->is('our-story') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300 hidden md:block">Our Story</a>
                 <a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Contact</a>
+                <a href="{{ url('#') }}" class="{{ request()->is('contact') ? 'text-green-400 font-bold border-green-400' : 'text-gray-200 font-medium border-transparent' }} pb-1 border-b-2 hover:text-green-400 transition duration-300">Blogs</a>
             </div>
 
             <!-- Right spacer to push content to center -->
