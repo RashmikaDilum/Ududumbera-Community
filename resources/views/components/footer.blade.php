@@ -19,10 +19,10 @@
 
                 <!-- Social Media -->
                 <div class="flex justify-center lg:justify-start space-x-4">
-                    <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                    <a href="https://www.facebook.com/share/1ACJooVSrY/" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                         <img src="{{ asset('images/footer/facebook.png') }}"alt="icon" class="w-4 h-4 object-contain" />
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                    <a href="https://www.instagram.com/knuckles_products?igsh=Y295eHhxeWVmeDIy" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                         <img src="{{ asset('images/footer/instagram.png') }}" alt="icon" class="w-4 h-4 object-contain" />
                     </a>
                     <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">

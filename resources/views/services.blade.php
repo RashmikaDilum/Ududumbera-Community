@@ -95,32 +95,17 @@
     <!-- Detailed Services Section -->
     <main class="container mx-auto py-16 md:py-24 px-4 space-y-20">
 
-        <!-- Service 2: Artisan Workshops -->
-        <section id="workshops" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <img src="{{ asset('images/services/artisan_worksop.png') }}" alt="Artisan Workshops" class="rounded-xl shadow-lg w-full h-96 object-cover">
-            </div>
-            <div>
-                <h3 class="text-3xl font-bold text-green-800 mb-4">Artisan Workshops</h3>
-                <p class="text-gray-700 leading-relaxed mb-4">
-                    Immerse yourself in Sri Lankan craft with our hands-on workshops. Learn the secrets of Kithul tapping, try your hand at traditional weaving, or discover the art of natural dyeing.
-                </p>
-                <p class="text-gray-700 leading-relaxed mb-6">
-                    Led by our most experienced artisans, these workshops offer a unique opportunity to connect with the culture, learn a new skill, and create your own handcrafted souvenir to take home. Suitable for all ages and skill levels.
-                </p>
-                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Book a Workshop</a>
-            </div>
-        </section>
 
-        <!-- Service 3: Community & Cultural Tours -->
+
+        <!-- Service 3: workshop Community & Cultural Tours -->
         <section id="tours" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
              <div class="order-2 md:order-1">
-                <h3 class="text-3xl font-bold text-green-800 mb-4">Community & Cultural Tours</h3>
+                <h3 class="text-3xl font-bold text-green-800 mb-4">Artisan Workshops, Community & Cultural Tours</h3>
                 <p class="text-gray-700 leading-relaxed mb-4">
-                    Journey into the heart of our villages with a guided cultural tour. See firsthand where our products come from, meet the artisans and their families, and experience the rhythm of daily life in rural Sri Lanka.
+                    Experience the vibrant culture and heritage of Kubukogolla with our hands-on artisan workshops. Learn the traditional art of making Kithul Pani and Kithul Hakuru, including live demonstrations of climbing and tapping the kithul palm. Participate in picking fresh gammiris (pepper) and preparing authentic Sri Lankan dishes like roti, thalapa, lunu miris, and other local cuisines.
                 </p>
                 <p class="text-gray-700 leading-relaxed mb-6">
-                    Our tours include visits to Kithul groves, artisan homes, and local markets. Enjoy a traditional home-cooked meal and listen to stories that have been passed down through generations. It's an authentic, unforgettable experience.
+                    Beyond food, engage with the community by joining local religious rituals and traditional ceremonies, including kothil events and seasonal village celebrations. These workshops offer a unique opportunity to immerse yourself in age-old customs, culinary traditions, and spiritual practices, connecting deeply with the lifestyle and culture of the Knuckles communit
                 </p>
                 <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Schedule a Tour</a>
             </div>
@@ -137,10 +122,10 @@
             <div>
                 <h3 class="text-3xl font-bold text-green-800 mb-4">Kabana Stay</h3>
                 <p class="text-gray-700 leading-relaxed mb-4">
-                    Escape the hustle and bustle and find tranquility in our traditional Kabana. Nestled in nature, our eco-friendly accommodations offer a rustic yet comfortable stay.
+                    Stay in our comfortable resort featuring two bedrooms, a living room, a kitchen, and a bathroom, perfect for families or small groups. Enjoy traditional Sri Lankan cuisine prepared with fresh local ingredients, from kithul-based dishes to roti, lunu miris, and more.
                 </p>
                 <p class="text-gray-700 leading-relaxed mb-6">
-                    Wake up to the sounds of the forest, enjoy meals made from fresh, local ingredients, and spend your days exploring the beautiful surroundings. It's the perfect retreat for nature lovers and those seeking a peaceful getaway.
+                    Explore the surroundings with adventurous activities like safe swimming at nearby spots, professional-guided diving, hiking trails, and relaxing nature walks. Immerse yourself in local culture by engaging with the community, learning traditional practices, and experiencing the heritage of Kubukogolla.
                 </p>
                 <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Check Availability</a>
             </div>
@@ -151,10 +136,10 @@
              <div class="order-2 md:order-1">
                 <h3 class="text-3xl font-bold text-green-800 mb-4">Local Tour Guides</h3>
                 <p class="text-gray-700 leading-relaxed mb-4">
-                    Explore the Knuckles Mountain Range and surrounding areas with an experienced local guide. Our guides are born and raised in these hills and possess an unparalleled knowledge of the trails, wildlife, and hidden gems.
+                    Explore the Knuckles region with our knowledgeable local guides, who offer an authentic and immersive experience. Discover hidden trails, scenic viewpoints, and natural swimming spots while learning about the local culture, traditions, and biodiversity.
                 </p>
                 <p class="text-gray-700 leading-relaxed mb-6">
-                    Whether you're looking for a challenging trek, a gentle nature walk, or a bird-watching expedition, our guides can tailor a tour to your interests and fitness level, ensuring a safe and enriching adventure.
+                    Participate in community activities, traditional ceremonies, and culinary experiences, gaining deeper insight into the heritage and lifestyle of Kubukogolla. Safe, informative, and unforgettable — your gateway to the heart of the region.
                 </p>
                 <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Find Your Guide</a>
             </div>
@@ -171,10 +156,10 @@
             <div>
                 <h3 class="text-3xl font-bold text-green-800 mb-4">Scenic Camping Sites</h3>
                 <p class="text-gray-700 leading-relaxed mb-4">
-                    Experience the great outdoors with our designated camping sites. Set up your tent in breathtaking locations with stunning views of the Knuckles Mountain Range.
+                    Immerse yourself in nature at our scenic camping site in the heart of the Knuckles region. Set up your tent amid lush surroundings and enjoy relaxing walks, nearby swimming spots, and guided hiking trails.
                 </p>
                 <p class="text-gray-700 leading-relaxed mb-6">
-                    Our sites provide a safe and serene environment for you to connect with nature. Whether you're an experienced camper or new to it, we offer basic amenities to ensure a comfortable and memorable stay under the stars.
+                    Experience traditional Sri Lankan cuisine, engage with the local community, and participate in cultural activities and ceremonies. Perfect for adventurers and families seeking a blend of nature, culture, and authentic village life.
                 </p>
                 <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 btn-primary inline-block">Book a Campsite</a>
             </div>

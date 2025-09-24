@@ -103,7 +103,7 @@
                         <img alt="mail" src="{{ asset('images/contact/mail.png') }}" class="icon bg-white rounded-full p-4 w-14 h-14 object-contain">
                         <div class="contact-info pl-5 pt-1">
                             <div class="contact-info-title text-[#01bdd4] font-semibold text-lg">Email</div>
-                            <div>info@ududumbara.community</div>
+                            <div>knucklesproducts@gmail.com</div>
                         </div>
                     </div>
                 </div>
