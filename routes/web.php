@@ -7,11 +7,24 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProviderRedirectController;
+use App\Http\Controllers\ProviderCallbackController;
+
+
+
 
 Route::get('/', function () {
     $featuredProducts = App\Models\Product::active()->inStock()->featured()->take(4)->get();
     return view('welcome', compact('featuredProducts'));
 });
+
+
+// Generic OAuth Routes (for multiple providers like Google, Facebook, etc.)
+Route::get('/auth/{provider}/redirect', ProviderRedirectController::class)->name('auth.redirect');
+Route::get('/auth/{provider}/callback', ProviderCallbackController::class)->name('auth.callback');
+
+
+
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
@@ -50,9 +63,9 @@ Route::middleware('guest')->group(function () {
     Route::get('/reset-password/{token}', [PasswordResetController::class, 'showResetPasswordForm'])->name('password.reset');
     Route::post('/reset-password', [PasswordResetController::class, 'resetPassword'])->name('password.update');
 
-    // Google OAuth Routes
-    Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.redirect');
-    Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
+    // Legacy Google OAuth Routes (deprecated - use generic routes above)
+    // Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.redirect');
+    // Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
 });
 
 // Authenticated Routes

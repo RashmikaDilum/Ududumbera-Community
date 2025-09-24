@@ -136,7 +136,7 @@
                     </div>
 
                     <div class="mt-6">
-                        <a href="{{ route('google.redirect') }}"
+                        <a href="{{ route('auth.redirect', 'google') }}"
                            class="w-full inline-flex justify-center items-center px-4 py-3 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition duration-300">
                             <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24">
                                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
