@@ -110,7 +110,7 @@
                     <h3 class="text-2xl font-bold text-green-800 mb-4">From Root to Golden Spice: Our Turmeric</h3>
                     <img src="{{ asset('images/hero/Tumeric.jpg') }}" alt="Turmeric Processing" class="w-full rounded-lg mb-4 shadow-sm">
                     <p class="text-gray-700 leading-relaxed mb-4">
-                        Our organic turmeric is cultivated in fertile Sri Lankan soils. After careful harvesting, the turmeric rhizomes are cleaned, boiled, dried in the sun, and then ground into a vibrant, aromatic powder. This traditional method preserves its potent flavor and beneficial properties, ensuring you receive the purest spice.
+                        Our turmeric powder begins with carefully grown turmeric rhizomes in the fertile soils of Kubukogolla. The rhizomes are harvested by hand, cleaned thoroughly, and sun-dried to preserve their vibrant golden color, aroma, and natural curcumin content. Once dried, the rhizomes are ground into a fine powder using traditional methods, ensuring maximum flavor, color, and nutritional value. This process, carried out by the local community, maintains the authentic, natural quality of turmeric while supporting sustainable village livelihoods.
                     </p>
                     <a href="{{ url('/products') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Shop Turmeric &rightarrow;</a>
                 </div>
@@ -121,12 +121,11 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Slippers Process -->
                     <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition duration-300">
-                        <h3 class="text-2xl font-bold text-green-800 mb-4">Weaving Comfort: Community Hand Slippers</h3>
+                        <h3 class="text-2xl font-bold text-green-800 mb-4">Weaving Comfort: Community Rubber Slippers</h3>
                         <iframe width="100%" height="350" src="https://www.youtube.com/embed/VQl6Mp2KbgM?autoplay=1&mute=1" title="Slipper Making Process" frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg shadow-sm"></iframe>
                         <p class="text-gray-700 leading-relaxed mb-4">
-                            Each pair of our hand slippers is a testament to the skill and dedication of local artisans. Using locally sourced natural fibers, they meticulously weave and craft each component. This traditional hand-making process not only creates unique, comfortable footwear but also provides sustainable livelihoods for families within our community.
-                        </p>
-                        <a href="{{ url('/products') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Shop Handcrafted Slippers &rightarrow;</a>
+                            Our rubber slippers are made from high-quality rubber, molded into durable slipper shapes. Each pair is carefully trimmed and finished by hand to ensure comfort and long-lasting wear. Produced by the Kubukogolla community, buying these slippers helps reduce reliance on the Knuckles Forest for income, supporting local livelihoods while providing sturdy, everyday footwear.
+                        <a href="{{ url('/products') }}" class="text-green-600 hover:underline font-semibold mt-4 inline-block">Shop Rubber Slippers &rightarrow;</a>
                     </div>
                     <!-- Pepper Drying Process -->
                     <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200 hover:shadow-lg transition duration-300">
