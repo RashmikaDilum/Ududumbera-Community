@@ -37,7 +37,7 @@
                 <button id="continue-shopping-button" class="w-full md:w-auto px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium rounded-lg transition duration-150">
                     Continue Shopping
                 </button>
-                <a href="https://sandbox.payhere.lk/pay/ofd20c4fe" id="checkout-button" target="_blank" rel="noopener" class="w-full md:w-auto px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition duration-150 text-center flex items-center justify-center">
+                <a href="{{ route('checkout.index') }}" id="checkout-button" class="w-full md:w-auto px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition duration-150 text-center flex items-center justify-center">
                     Checkout
                 </a>
             </div>
@@ -126,11 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (continueShoppingButton) {
         continueShoppingButton.addEventListener('click', closeCart);
     }
-    if (checkoutButton) {
-        checkoutButton.addEventListener('click', () => {
-            alert('Checkout functionality will be implemented soon!');
-        });
-    }
+    // Checkout button is now a link, no need for event listener
 
     // Close modal if user clicks outside of it (on the backdrop)
     if (cartModal) {

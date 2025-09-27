@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProviderRedirectController;
 use App\Http\Controllers\ProviderCallbackController;
@@ -90,5 +91,12 @@ Route::middleware('auth')->group(function () {
         Route::delete('/', [CartController::class, 'clear'])->name('clear');
         Route::get('/count', [CartController::class, 'count'])->name('count');
         Route::post('/sync', [CartController::class, 'sync'])->name('sync');
+    });
+
+    // Checkout Routes
+    Route::prefix('checkout')->name('checkout.')->group(function () {
+        Route::get('/', [CheckoutController::class, 'index'])->name('index');
+        Route::post('/process', [CheckoutController::class, 'process'])->name('process');
+        Route::get('/success/{order}', [CheckoutController::class, 'success'])->name('success');
     });
 });
