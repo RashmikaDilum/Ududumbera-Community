@@ -81,7 +81,7 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 75,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/',
+                'image' => 'images/products/white-paper.jpg',
                 'featured' => false
             ],
             [
