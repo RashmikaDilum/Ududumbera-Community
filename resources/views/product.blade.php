@@ -102,10 +102,11 @@
     </section>
 
     <!-- All Products Section -->
-    <main class="container mx-auto py-12 px-4 flex-grow">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">All Available Products</h2>
+    <main class="py-12 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">All Available Products</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             @forelse($products as $product)
             <!-- Product Card: {{ $product->name }} -->
             <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-black" data-product-id="{{ $product->id }}">
@@ -141,6 +142,7 @@
                 <p class="text-gray-500 text-sm mt-2">Please check back later for our amazing handcrafted products!</p>
             </div>
             @endforelse
+            </div>
         </div>
     </main>
 

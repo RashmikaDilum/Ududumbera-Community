@@ -192,7 +192,7 @@
             <!-- Product Card: Kithul Jaggery -->
             <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="1">
                 <a href="{{ route('products.show', 'pure-kithul-jaggery') }}">
-                    <img src="{{ asset('images/products/kithul-jaggery.jpg') }}" alt="Kithul Jaggery" class="product-img">
+                    <img src="{{ asset('images/products/kithul-hakuru.jpg') }}" alt="Kithul Jaggery" class="product-img">
                 </a>
                 <div class="product-content">
                     <div>
@@ -211,7 +211,7 @@
             <!-- Product Card: Kithul Juice -->
             <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="2">
                 <a href="{{ route('products.show', 'fresh-kithul-treacle') }}">
-                    <img src="{{ asset('images/products/kithul-juice.jpg') }}" alt="Kithul Juice" class="product-img">
+                    <img src="{{ asset('images/products/kithul-pani.jpg') }}" alt="Kithul Juice" class="product-img">
                 </a>
                 <div class="product-content">
                     <div>
@@ -230,7 +230,7 @@
             <!-- Product Card: Turmeric Powder -->
             <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="3">
                 <a href="{{ route('products.show', 'organic-turmeric-powder') }}">
-                    <img src="{{ asset('images/products/turmeric-powder.jpg') }}" alt="Turmeric Powder" class="product-img">
+                    <img src="{{ asset('images/products/kaha-kudu.jpg') }}" alt="Turmeric Powder" class="product-img">
                 </a>
                 <div class="product-content">
                     <div>
@@ -246,20 +246,20 @@
                 </div>
             </div>
 
-            <!-- Product Card: Community Hand Slippers -->
-            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="4">
-                <a href="{{ route('products.show', 'community-slippers') }}">
-                    <img src="{{ asset('images/products/handwoven-slippers.jpg') }}" alt="Hand Slippers" class="product-img">
+            <!-- Product Card: Pepper Powder -->
+            <div class="product-card bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out border border-gray-200 hover:shadow-2xl hover:scale-105 hover:border-green-600" data-product-id="5">
+                <a href="{{ route('products.show', 'Pepper powder-100g') }}">
+                    <img src="{{ asset('images/products/pepper-powder.jpg') }}" alt="Pepper Powder" class="product-img">
                 </a>
                 <div class="product-content">
                     <div>
-                        <a href="{{ route('products.show', 'community-slippers') }}">
-                            <h3 class="font-semibold text-xl mb-2 text-green-800 hover:text-green-600 transition duration-300">Hand-Woven Community Slippers</h3>
+                        <a href="{{ route('products.show', 'Pepper powder-100g') }}">
+                            <h3 class="font-semibold text-xl mb-2 text-green-800 hover:text-green-600 transition duration-300">Pepper Powder (100g)</h3>
                         </a>
-                        <p class="text-gray-600 text-sm mb-4">Comfortable and stylish slippers, hand-crafted with natural fibers by skilled village artisans.</p>
+                        <p class="text-gray-600 text-sm mb-4">Handpicked from the lush hillsides of the Knuckles Forest Reserve, this premium black pepper is sun-dried to lock in its bold aroma and sharp, spicy flavor. Perfect for curries, marinades, and everyday cooking.</p>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-green-700 font-bold text-lg">LKR 1200.00</span>
+                        <span class="text-green-700 font-bold text-lg">LKR 1500.00</span>
                         <button class="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold py-2 px-4 rounded-full transition duration-300 btn-primary add-to-cart-btn">Add to Cart</button>
                     </div>
                 </div>

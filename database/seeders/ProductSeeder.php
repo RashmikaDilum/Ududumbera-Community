@@ -25,7 +25,7 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 100,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/kithul-jaggery.jpg',
+                'image' => 'images/products/kithul-hakuru.jpg',
                 'featured' => true
             ],
             [
@@ -36,7 +36,7 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 80,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/kithul-juice.jpg',
+                'image' => 'images/products/kithul-pani.jpg',
                 'featured' => true
             ],
             [
@@ -47,7 +47,7 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 120,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/turmeric-powder.jpg',
+                'image' => 'images/products/kaha-kudu.jpg',
                 'featured' => false
             ],
 
@@ -76,12 +76,12 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'White pepper seeds (100g)',
                 'slug' => 'White pepper seeds-100g',
-                'description' => 'edit',
+                'description' => 'Sourced from the Knuckles Forest Reserve, this premium white pepper offers a milder, more refined flavor compared to black pepper. Sun-dried and processed by the Kubukogolla community, it\'s perfect for light curries, soups, and dishes where you want subtle spice without visible specks.',
                 'price' => 1500.00,
                 'stock_quantity' => 75,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/white-paper.jpg',
+                'image' => 'images/products/whitePepper-powder.jpg',
                 'featured' => false
             ],
             // [
