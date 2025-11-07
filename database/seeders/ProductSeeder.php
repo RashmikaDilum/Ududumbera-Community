@@ -70,7 +70,7 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 75,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/',
+                'image' => 'images/products/pepper-powder.jpg',
                 'featured' => false
             ],
             [
@@ -84,17 +84,17 @@ class ProductSeeder extends Seeder
                 'image' => 'images/products/white-paper.jpg',
                 'featured' => false
             ],
-            [
-                'name' => 'Cinnamon (100g)',
-                'slug' => 'Cinnamon-100g',
-                'description' => 'Ground from carefully harvested cinnamon bark, this fragrant powder adds warmth and sweetness to desserts, teas, and curries. Made by the Kubukogolla community, it combines authentic Sri Lankan flavor with support for local families.',
-                'price' => 1500.00,
-                'stock_quantity' => 75,
-                'in_stock' => true,
-                'status' => 'active',
-                'image' => 'images/products/',
-                'featured' => false
-            ],
+            // [
+            //     'name' => 'Cinnamon (100g)',
+            //     'slug' => 'Cinnamon-100g',
+            //     'description' => 'Ground from carefully harvested cinnamon bark, this fragrant powder adds warmth and sweetness to desserts, teas, and curries. Made by the Kubukogolla community, it combines authentic Sri Lankan flavor with support for local families.',
+            //     'price' => 1500.00,
+            //     'stock_quantity' => 75,
+            //     'in_stock' => true,
+            //     'status' => 'active',
+            //     'image' => 'images/products/',
+            //     'featured' => false
+            // ],
             [
                 'name' => 'Enasal (Dried Lemongrass)',
                 'slug' => 'Enasal (Dried Lemongrass)',
@@ -103,7 +103,7 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 75,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/',
+                'image' => 'images/products/enasal-ata.jpg',
                 'featured' => false
             ],
             [
@@ -114,7 +114,7 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 75,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/',
+                'image' => 'images/products/enasal-kudu.jpg',
                 'featured' => false
             ],
             [
@@ -125,7 +125,7 @@ class ProductSeeder extends Seeder
                 'stock_quantity' => 75,
                 'in_stock' => true,
                 'status' => 'active',
-                'image' => 'images/products/',
+                'image' => 'images/products/goraka-paste.jpg',
                 'featured' => false
             ],
 
