@@ -6,10 +6,15 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!-- Primary Meta Tags -->
-    <title>Checkout - Sri Lankan Community Delights</title>
-    <meta name="title" content="Checkout - Sri Lankan Community Delights">
+    <title>Checkout - Knuckles Products</title>
+    <meta name="title" content="Checkout - Knuckles Products">
     <meta name="description" content="Complete your order for authentic Sri Lankan products from the Knuckles Conservation Area.">
     <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon-192.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>

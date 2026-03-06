@@ -6,8 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-    <title>Sri Lankan Community Delights - Ududumbara Community</title>
-    <meta name="title" content="Sri Lankan Community Delights - Ududumbara Community">
+    <title>Knuckles Products</title>
+    <meta name="title" content="Knuckles Products">
     <meta name="description" content="Discover authentic Sri Lankan products from the Knuckles Conservation Area. Handcrafted Kithul products, organic spices, and traditional crafts supporting local communities.">
     <meta name="keywords" content="Sri Lanka, Knuckles Conservation Area, Kithul products, organic spices, handcrafted goods, community products, sustainable tourism, Ududumbara">
     <meta name="author" content="Ududumbara Community">
@@ -17,7 +17,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="Sri Lankan Community Delights - Ududumbara Community">
+    <meta property="og:title" content="Knuckles Products">
     <meta property="og:description" content="Discover authentic Sri Lankan products from the Knuckles Conservation Area. Handcrafted Kithul products, organic spices, and traditional crafts supporting local communities.">
     <meta property="og:image" content="{{ asset('images/main.jpg') }}">
     <meta property="og:site_name" content="Ududumbara Community">
@@ -26,7 +26,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ url()->current() }}">
-    <meta property="twitter:title" content="Sri Lankan Community Delights - Ududumbara Community">
+    <meta property="twitter:title" content="Knuckles Products">
     <meta property="twitter:description" content="Discover authentic Sri Lankan products from the Knuckles Conservation Area. Handcrafted Kithul products, organic spices, and traditional crafts supporting local communities.">
     <meta property="twitter:image" content="{{ asset('images/main.jpg') }}">
 
@@ -35,6 +35,12 @@
     <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
     <meta name="theme-color" content="#008000">
     <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon-192.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Our Services - Ududumbara Community</title>
-    <meta name="title" content="Our Services - Ududumbara Community">
+    <title>Our Services - Knuckles Products</title>
+    <meta name="title" content="Our Services - Knuckles Products">
     <meta name="description" content="Experience authentic Sri Lankan culture through our community services. Artisan workshops, cultural tours, camping sites, and guided experiences in the Knuckles Conservation Area.">
     <meta name="keywords" content="Sri Lankan cultural tours, artisan workshops, camping sites, guided tours, Knuckles Conservation Area, community services, sustainable tourism, cultural experiences">
     <meta name="author" content="Ududumbara Community">
@@ -34,6 +34,12 @@
     <meta name="geo.placename" content="Knuckles Conservation Area, Sri Lanka">
     <meta name="theme-color" content="#008000">
     <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon-192.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
