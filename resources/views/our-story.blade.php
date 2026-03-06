@@ -91,7 +91,7 @@
     <x-header />
 
     <!-- Our Story Section -->
-    <section id="our-story" class="py-16 md:py-24 bg-white">
+    <section id="our-story" class="pt-32 pb-16 md:pt-36 md:pb-24 bg-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 section-heading mx-auto">Our Story: Empowering Communities</h2>
             <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700 space-y-6">

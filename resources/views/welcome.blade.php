@@ -153,7 +153,7 @@
     <x-header />
 
     <!-- Hero Section -->
-    <section class="relative py-20 md:py-32 text-center overflow-hidden">
+    <section class="relative text-center overflow-hidden" style="min-height: 100vh;">
         <!-- Slider Container -->
         <div id="hero-slider" class="absolute inset-0 w-full h-full">
             <!-- Slide Images (Absolute positioned, controlled by JS) -->
@@ -171,7 +171,7 @@
         <div class="absolute inset-0 bg-black opacity-40"></div>
 
         <!-- Content -->
-        <div class="container mx-auto px-4 relative z-10">
+        <div class="container mx-auto px-4 relative z-10" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <h1 class="text-4xl md:text-6xl text-white font-extrabold leading-tight mb-6">Authentic Sri Lankan Delights & Treasures</h1>
             <p class="text-lg text-white md:text-xl mb-10 max-w-3xl mx-auto">Savor the rich taste of tradition and experience the beauty of community-made products, sustainably sourced from the heart of Sri Lanka.</p>
             <a href="{{ url('/products') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-primary">Explore Our Products</a>
@@ -186,12 +186,12 @@
         </div>
     </section>
     <!-- Products Section -->
-<section id="products" class="relative py-16 md:py-24">
+<section id="products" class="relative py-16 md:py-24" style="padding-top: 5rem;">
     <!-- Background Image with Overlay -->
   
 
     <div class="container mx-auto px-4 relative z-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto text-black">Our Featured Products</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto text-black" style="margin-top: 2rem;">Our Featured Products</h2>
 
         <div class="product-grid">
             <!-- Product Card: Kithul Jaggery -->

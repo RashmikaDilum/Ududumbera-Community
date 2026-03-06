@@ -91,7 +91,7 @@
     <x-header />
 
     <!-- How It's Made Section -->
-    <section id="how-its-made" class="py-16 md:py-24 bg-gray-100">
+    <section id="how-its-made" class="pt-32 pb-16 md:pt-36 md:pb-24 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">The Journey: From Land to Your Hand</h2>
 

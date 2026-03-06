@@ -78,7 +78,7 @@
     <div class="relative z-10">
         <x-header />
 
-        <div class="container max-w-[950px] mx-auto my-20 px-4 md:px-8 lg:px-4 text-white leading-relaxed">
+        <div class="container max-w-[950px] mx-auto px-4 md:px-8 lg:px-4 text-white leading-relaxed" style="margin-top: 8rem; margin-bottom: 5rem;">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
                 <!-- Text Container -->
