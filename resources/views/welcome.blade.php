@@ -188,11 +188,10 @@
     <!-- Products Section -->
 <section id="products" class="relative py-16 md:py-24">
     <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 bg-cover bg-center blur-sm" style="background-image: url('{{ asset('images/main.jpg') }}');"></div>
-    <div class="absolute inset-0 bg-black opacity-50"></div>
+  
 
     <div class="container mx-auto px-4 relative z-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto text-white">Our Featured Products</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto text-black">Our Featured Products</h2>
 
         <div class="product-grid">
             <!-- Product Card: Kithul Jaggery -->
