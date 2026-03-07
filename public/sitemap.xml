@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <url>
+    <loc>http://knucklesproducts.test</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/how-its-made</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/our-story</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/contact</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/pure-kithul-jaggery</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/fresh-kithul-treacle</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/organic-turmeric-powder</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/Dried Pepper seeds-100g</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/Pepper powder-100g</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/White pepper seeds-100g</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/Enasal (Dried Lemongrass)</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/Enasal powder</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://knucklesproducts.test/products/Goraka Paste-100g</loc>
+    <lastmod>2025-11-07T09:39:22+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+</urlset>

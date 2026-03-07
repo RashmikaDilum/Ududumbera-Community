@@ -36,6 +36,33 @@
     <meta name="theme-color" content="#008000">
     <link rel="canonical" href="{{ url()->current() }}">
 
+    <!-- Product Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{ $product->name }}",
+      "image": "{{ asset($product->image) }}",
+      "description": "{{ $product->description }}",
+      "brand": {
+        "@type": "Brand",
+        "name": "Knuckles Products - Ududumbara Community"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ url()->current() }}",
+        "priceCurrency": "LKR",
+        "price": "{{ $product->effective_price }}",
+        "availability": "{{ $product->isAvailable() ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' }}",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Knuckles Products - Ududumbara Community"
+        }
+      }
+    }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.png') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon-192.png') }}">

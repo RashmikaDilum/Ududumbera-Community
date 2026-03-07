@@ -36,6 +36,51 @@
     <meta name="theme-color" content="#008000">
     <link rel="canonical" href="{{ url()->current() }}">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "{{ url('/') }}#organization",
+          "name": "Knuckles Products - Ududumbara Community",
+          "url": "{{ url('/') }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ asset('images/logoo.png') }}",
+            "width": 150,
+            "height": 150
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+94-74-018-2723",
+            "contactType": "customer service",
+            "areaServed": "LK",
+            "availableLanguage": ["en", "si"]
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "No 167, Kubukgolla",
+            "addressLocality": "Meemure",
+            "addressRegion": "Central Province",
+            "addressCountry": "LK"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ url('/') }}#website",
+          "url": "{{ url('/') }}",
+          "name": "Knuckles Products",
+          "description": "Discover authentic Sri Lankan products from the Knuckles Conservation Area. Handcrafted Kithul products, organic spices, and traditional crafts.",
+          "publisher": {
+            "@id": "{{ url('/') }}#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.png') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon-192.png') }}">
