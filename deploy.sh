@@ -68,5 +68,9 @@ php artisan queue:restart || true
 echo "✅ Disabling maintenance mode..."
 php artisan up
 
+# Generate new sitemap for production
+echo "🗺️ Generating fresh sitemap..."
+php artisan sitemap:generate || true
+
 echo "🎉 Deployment completed successfully!"
 echo "📅 $(date)"
