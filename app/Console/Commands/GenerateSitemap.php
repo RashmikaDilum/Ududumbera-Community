@@ -3,8 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Spatie\Sitemap\Sitemap;
-use Spatie\Sitemap\Tags\Url;
 use App\Models\Product;
 
 class GenerateSitemap extends Command
@@ -29,26 +27,48 @@ class GenerateSitemap extends Command
     public function handle()
     {
         $this->info('Generating sitemap...');
+        
+        $xml = new \XMLWriter();
+        $xml->openMemory();
+        $xml->setIndent(true);
+        $xml->startDocument('1.0', 'UTF-8');
+        
+        $xml->startElement('urlset');
+        $xml->writeAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
 
-        $sitemap = Sitemap::create()
-            ->add(Url::create('/')->setPriority(1.0)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY))
-            ->add(Url::create('/products')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY))
-            ->add(Url::create('/services')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY))
-            ->add(Url::create('/how-its-made')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/our-story')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/contact')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
+        // Static Pages
+        $urls = [
+            ['loc' => url('/'), 'priority' => '1.0', 'changefreq' => 'daily'],
+            ['loc' => url('/products'), 'priority' => '0.9', 'changefreq' => 'daily'],
+            ['loc' => url('/services'), 'priority' => '0.8', 'changefreq' => 'weekly'],
+            ['loc' => url('/how-its-made'), 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => url('/our-story'), 'priority' => '0.8', 'changefreq' => 'monthly'],
+            ['loc' => url('/contact'), 'priority' => '0.7', 'changefreq' => 'yearly'],
+        ];
+
+        foreach ($urls as $urlDef) {
+            $xml->startElement('url');
+            $xml->writeElement('loc', $urlDef['loc']);
+            $xml->writeElement('changefreq', $urlDef['changefreq']);
+            $xml->writeElement('priority', $urlDef['priority']);
+            $xml->endElement(); // url
+        }
 
         // Add all products dynamically
-        Product::all()->each(function (Product $product) use ($sitemap) {
-            $sitemap->add(
-                Url::create("/products/{$product->slug}")
-                    ->setPriority(0.9)
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
-                    ->setLastModificationDate($product->updated_at)
-            );
-        });
+        $products = Product::all();
+        foreach ($products as $product) {
+            $xml->startElement('url');
+            $xml->writeElement('loc', url("/products/{$product->slug}"));
+            $xml->writeElement('lastmod', $product->updated_at->tz('UTC')->toAtomString());
+            $xml->writeElement('changefreq', 'daily');
+            $xml->writeElement('priority', '0.9');
+            $xml->endElement(); // url
+        }
 
-        $sitemap->writeToFile(public_path('sitemap.xml'));
+        $xml->endElement(); // urlset
+        $xml->endDocument();
+
+        file_put_contents(public_path('sitemap.xml'), $xml->outputMemory());
 
         $this->info('Sitemap generated successfully!');
     }
