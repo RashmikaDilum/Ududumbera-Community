@@ -191,7 +191,7 @@
     <x-header />
 
     <!-- Product Detail Section -->
-    <main class="container mx-auto py-12 px-4">
+    <main class="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-16">
         <!-- Breadcrumb -->
         <nav class="breadcrumb">
             <a href="{{ url('/') }}">Home</a>

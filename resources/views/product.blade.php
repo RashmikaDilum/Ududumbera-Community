@@ -99,7 +99,7 @@
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black opacity-50"></div>
 
-        <div class="container mx-auto relative z-10 px-4">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10">
             <h2 class="text-5xl font-extrabold mb-4">Discover Our Handcrafted Treasures</h2>
             <p class="text-xl max-w-3xl mx-auto opacity-95">
                 Explore our full collection of unique products, lovingly made by skilled artisans from various village communities. Each item tells a story of tradition, dedication, and craft.
@@ -154,7 +154,7 @@
 
     <!-- Services Call to Action Section -->
     <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4 text-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 text-center">
             <h2 class="text-3xl font-bold text-green-800 mb-4">More Than Just Products</h2>
             <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
                 Immerse yourself in our culture. We also offer unique services like artisan workshops, cultural tours, and tranquil Kabana stays.

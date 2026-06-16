@@ -122,8 +122,6 @@
     @media (min-width: 1024px) {
         .product-grid {
             grid-template-columns: repeat(4, 1fr);
-            max-width: 1200px;
-            margin: 0 auto;
         }
     }
 
@@ -216,7 +214,7 @@
         <div class="absolute inset-0 bg-black opacity-40"></div>
 
         <!-- Content -->
-        <div class="container mx-auto px-4 relative z-10" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10 w-full" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <h1 class="text-4xl md:text-6xl text-white font-extrabold leading-tight mb-6">Authentic Sri Lankan Delights & Treasures</h1>
             <p class="text-lg text-white md:text-xl mb-10 max-w-3xl mx-auto">Savor the rich taste of tradition and experience the beauty of community-made products, sustainably sourced from the heart of Sri Lanka.</p>
             <a href="{{ url('/products') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-primary">Explore Our Products</a>
@@ -235,8 +233,10 @@
     <!-- Background Image with Overlay -->
   
 
-    <div class="container mx-auto px-4 relative z-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto text-black" style="margin-top: 2rem;">Our Featured Products</h2>
+    <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10">
+        <div class="text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 section-heading text-black" style="margin-top: 2rem;">Our Featured Products</h2>
+        </div>
 
         <div class="product-grid">
             <!-- Product Card: Kithul Jaggery -->
@@ -320,8 +320,10 @@
 
     <!-- How It's Made Summary Section -->
     <section id="how-its-made-summary" class="py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 section-heading mx-auto">From Land to Your Hand</h2>
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">From Land to Your Hand</h2>
+            </div>
             <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
                 Every product tells a story of tradition, dedication, and community. We follow time-honored methods to bring you authentic, high-quality goods straight from the heart of Sri Lanka.
             </p>
@@ -348,8 +350,10 @@
 
     <!-- Our Services Section -->
     <section id="services" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">Our Services</h2>
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 section-heading">Our Services</h2>
+            </div>
             <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
                 Beyond our products, we offer unique experiences and services that connect you directly with our community's culture and craftsmanship.
             </p>
@@ -431,7 +435,7 @@
 
     <!-- Call to Action Section -->
     <section class="py-16 bg-green-700 text-white text-center">
-        <div class="container mx-auto px-4">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Support Local, Experience Authentic!</h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto">Discover the genuine taste and craftsmanship that comes directly from the hands of Sri Lankan communities.</p>
             <a href="{{ url('/products') }}" class="bg-white text-green-700 hover:bg-gray-200 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 btn-primary">Shop Now</a>
@@ -440,8 +444,10 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 md:py-24 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">Get In Touch</h2>
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 section-heading">Get In Touch</h2>
+            </div>
             <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md border border-gray-200">
                 <p class="text-center text-gray-700 mb-6">Have questions or want to learn more about our products and communities?</p>
                 <form class="space-y-4">

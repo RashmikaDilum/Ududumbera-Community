@@ -92,7 +92,7 @@
 
     <!-- Our Story Section -->
     <section id="our-story" class="pt-32 pb-16 md:pt-36 md:pb-24 bg-white">
-        <div class="container mx-auto px-4 text-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 section-heading mx-auto">Our Story: Empowering Communities</h2>
             <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700 space-y-6">
                 <p>

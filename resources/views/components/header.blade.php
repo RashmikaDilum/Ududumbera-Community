@@ -1,7 +1,7 @@
-<header id="main-header" class="fixed top-0 left-0 p-4 h-24 w-full z-50 transition-all duration-500 ease-in-out" style="background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
-    <div class="container mx-auto h-full relative">
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out" style="background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+    <div class="max-w-7xl mx-auto h-24 px-4 md:px-8 lg:px-16 py-4 relative">
         <!-- Left Logo (Overlaid) - Positioned absolutely relative to the container div -->
-        <div class="absolute left-0 -top-2 z-20">
+        <div class="absolute left-4 md:left-8 lg:left-16 -top-2 z-20">
             <a href="{{ url('/') }}" class="block bg-transparent p-2 rounded-full">
                 <img class="h-28 w-auto max-w-none" src="{{ asset('images/logoo.png') }}" alt="Logo" style="display: block;">
             </a>

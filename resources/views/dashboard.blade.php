@@ -56,7 +56,7 @@
 <body>
     <x-header />
 
-    <main class="container mx-auto px-4 py-8">
+    <main class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8">
         <div class="max-w-4xl mx-auto">
             <div class="bg-white rounded-lg shadow-lg p-8">
                 <h1 class="text-3xl font-bold text-green-800 mb-6">Welcome, {{ auth()->user()->first_name ?? auth()->user()->name }}!</h1>

@@ -90,7 +90,7 @@
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black opacity-50"></div>
 
-        <div class="container mx-auto relative z-10 px-4">
+        <div class="max-w-7xl mx-auto relative z-10 px-4 md:px-8 lg:px-16">
             <h2 class="text-5xl font-extrabold mb-4">Our Community Services</h2>
             <p class="text-xl max-w-3xl mx-auto opacity-95">
                 Experience the heart of Sri Lankan culture through our unique services, designed to connect you with our artisans and their traditions.
@@ -99,7 +99,7 @@
     </section>
 
     <!-- Detailed Services Section -->
-    <main class="container mx-auto py-16 md:py-24 px-4 space-y-20">
+    <main class="max-w-7xl mx-auto py-16 md:py-24 px-4 md:px-8 lg:px-16 space-y-20">
 
 
 
@@ -175,7 +175,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 md:py-24 bg-gray-50">
-        <div class="container mx-auto px-4">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading mx-auto">Inquire About Our Services</h2>
             <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md border border-gray-200">
                 <p class="text-center text-gray-700 mb-6">Interested in one of our services? Fill out the form below and we'll get back to you shortly.</p>
